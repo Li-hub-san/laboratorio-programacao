@@ -1,6 +1,8 @@
 package ficha2;
 
+import java.text.Normalizer;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Exercises {
   static Scanner sc = new Scanner(System.in);
@@ -15,9 +17,13 @@ public class Exercises {
 //    double choice = requestNumber("Input 1 to calculate a triangle area or any other number to calculate the rectangle area: ");
 //    areaCalc(height, base, choice);
 
-    System.out.print("Input a number: ");
-    int userInput = sc.nextInt();
-    System.out.println(userInput + "!= " + recursiveFactorial(userInput));
+//    System.out.print("Input a number: ");
+//    int userInput = sc.nextInt();
+//    System.out.println(userInput + "!= " + recursiveFactorial(userInput));
+
+    System.out.println("Input any expression: ");
+    String userInput = sc.nextLine();
+    System.out.println("Vowels in your expression: " + numTotalVowels(userInput));
 
   }
 
@@ -63,4 +69,34 @@ public class Exercises {
     return 1;
   }
 
+  private static int numTotalVowels(String userExpression) {
+    int vowelCount = 0;
+
+    for (int i = 0; i < userExpression.length(); i++) {
+      String currentLetter = String.valueOf(userExpression.charAt(i)).toLowerCase();
+
+      if (isVowelsUsingRegex(currentLetter)) {
+        vowelCount++;
+      }
+    }
+
+    return vowelCount;
+  }
+
+  private static boolean isVowel(String currentLetter) {
+    switch (Normalizer.normalize(currentLetter.toLowerCase(), Normalizer.Form.NFD)) {
+      case "a", "e", "i", "o", "u" -> {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private static boolean isVowelsUsingRegex(String currentLetter) {
+    return Pattern.compile("[aeiou]", Pattern.CASE_INSENSITIVE)
+        .matcher(Normalizer.normalize(currentLetter, Normalizer.Form.NFD))
+        .find();
+  }
+
 }
+
