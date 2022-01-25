@@ -8,28 +8,49 @@ public class Exercises {
   static Scanner sc = new Scanner(System.in);
 
   public static void main(String[] args) {
-//    double height = requestNumber("Input a height: ");
-//    double base = requestNumber("Input a base: ");
-//
-//    System.out.println("Triangle area: " + areaTriangle(height, base));
-//    System.out.println("Rectangle area: " + areaRectangle(height, base));
-//
-//    double choice = requestNumber("Input 1 to calculate a triangle area or any other number to calculate the rectangle area: ");
-//    areaCalc(height, base, choice);
+    System.out.println("\n------- Exercise 1 -------");
+    double height = requestDouble("Input a height: ");
+    double base = requestDouble("Input a base: ");
+    System.out.println("Triangle area: " + areaTriangle(height, base));
 
-//    System.out.print("Input a number: ");
-//    int userInput = sc.nextInt();
-//    System.out.println(userInput + "!= " + recursiveFactorial(userInput));
+    System.out.println("\n------- Exercise 2 -------");
+    System.out.println("Rectangle area: " + areaRectangle(height, base));
 
-    System.out.println("Input any expression: ");
-    String userInput = sc.nextLine();
-    System.out.println("Vowels in your expression: " + numTotalVowels(userInput));
+    System.out.println("\n------- Exercise 3 -------");
+    double choice = requestDouble("Input 1 to calculate a triangle area or any other number to calculate the rectangle area: ");
+    areaCalc(height, base, choice);
+//
+    System.out.println("\n------- Exercise 4 -------");
+    int userInput = requestInt("Input a number: ");
+    System.out.println(userInput + "! = " + calculateFactorial(userInput));
+
+    System.out.println("\n------- Exercise 5 -------");
+    userInput = requestInt("Input a number: ");
+    System.out.println(userInput + "! = " + recursiveFactorial(userInput));
+
+    System.out.println("\n------- Exercise 6 -------");
+    String userExpression = requestString("Input any expression: ");
+    System.out.println("Vowels in your expression: " + numTotalVowels(userExpression));
 
   }
 
-  private static double requestNumber(String message) {
+  private static double requestDouble(String message) {
     System.out.print(message);
-    return sc.nextDouble();
+    double number = sc.nextDouble();
+    sc.nextLine();
+    return number;
+  }
+
+  private static int requestInt(String message) {
+    System.out.print(message);
+    int number = sc.nextInt();
+    sc.nextLine();
+    return number;
+  }
+
+  private static String requestString(String message) {
+    System.out.print(message);
+    return sc.nextLine();
   }
 
   private static double areaTriangle(double height, double base) {
@@ -60,8 +81,8 @@ public class Exercises {
   private static int recursiveFactorial(int userInput) {
     if (userInput > 0) {
       int recursiveFactorial = recursiveFactorial(userInput - 1);
-      System.out.println("recursiveFactorial(userInput - 1) * userInput");
-      System.out.println(recursiveFactorial + " " + userInput);
+//      System.out.println("recursiveFactorial(userInput - 1) * userInput");
+//      System.out.println(recursiveFactorial + " " + userInput);
       int currentFact = recursiveFactorial * userInput;
       System.out.println(currentFact);
       return currentFact;
