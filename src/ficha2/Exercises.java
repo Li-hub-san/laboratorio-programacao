@@ -19,7 +19,7 @@ public class Exercises {
     System.out.println("\n------- Exercise 3 -------");
     double choice = requestDouble("Input 1 to calculate a triangle area or any other number to calculate the rectangle area: ");
     areaCalc(height, base, choice);
-//
+
     System.out.println("\n------- Exercise 4 -------");
     int userInput = requestInt("Input a number: ");
     System.out.println(userInput + "! = " + calculateFactorial(userInput));
@@ -53,6 +53,13 @@ public class Exercises {
     return sc.nextLine();
   }
 
+  /**
+   * Receive double height and double base and return the area of a triangle.
+   *
+   * @param height double height
+   * @param base   double base
+   * @return Area of the triangle.
+   */
   private static double areaTriangle(double height, double base) {
     return (base * height) / 2;
   }
@@ -115,8 +122,8 @@ public class Exercises {
 
   private static boolean isVowelsUsingRegex(String currentLetter) {
     return Pattern.compile("[aeiou]", Pattern.CASE_INSENSITIVE)
-        .matcher(Normalizer.normalize(currentLetter, Normalizer.Form.NFD))
-        .find();
+            .matcher(Normalizer.normalize(currentLetter, Normalizer.Form.NFD))
+            .find();
   }
 
 }
