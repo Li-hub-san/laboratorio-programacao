@@ -23,7 +23,9 @@
 <br>u: 1
 </p>
 
-<p><b>Ex. 8:</b> Escreva uma função chamada convertSeconds que recebe um número (segundos) e  imprime o número de minutos, horas, dias e meses (considere que um mês tem 30 dias).
+<p><b>Ex. 8:</b> Escreva uma função chamada percentMulheres que recebe uma lista de strings (nomes) e retorna a percentagem de mulheres. Considere que os nomes das mulheres acabam todos em "a".</p>
+
+<p><b>Ex. 9:</b> Escreva uma função chamada convertSeconds que recebe um número (segundos) e  imprime o número de minutos, horas, dias e meses (considere que um mês tem 30 dias).
 <br>Insira o numero de segundos: 3601
 <br>Day: 0
 <br>Hour: 1

@@ -1,6 +1,8 @@
 package ficha2;
 
 import java.text.Normalizer;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -37,20 +39,30 @@ public class Exercises {
 //        countEachVowel("Lígia Santos ! ");
 
         System.out.println("\n------- Exercise 8 -------");
-        System.out.println("\n--- 3601 segundos ---");
-        convertSeconds(3601);
-        System.out.println("\n--- 86401 segundos ---");
-        convertSeconds(86401);
-        System.out.println("\n--- 31560000 segundos ---");
-        convertSeconds(60 * 60 * 24 * 30 * 14);
-        System.out.println("\n--- 94680078 segundos ---");
-        convertSeconds(94680078);
-        System.out.println("\n--- 63 segundos ---");
-        convertSeconds(63);
-        System.out.println("\n--- 71 segundos ---");
-        convertSeconds(71);
+        List<String> women = new ArrayList<>();
+        women.add("Joana");
+        women.add("Carlos");
+        women.add("ANA");
+        women.add("Roberto");
+        System.out.println("List : " + women);
+        percentWomen(women);
 
+
+//        System.out.println("\n------- Exercise 9 -------");
+//        System.out.println("\n--- 3601 segundos ---");
+//        convertSeconds(3601);
+//        System.out.println("\n--- 86401 segundos ---");
+//        convertSeconds(86401);
+//        System.out.println("\n--- 31560000 segundos ---");
+//        convertSeconds(60 * 60 * 24 * 30 * 14);
+//        System.out.println("\n--- 94680078 segundos ---");
+//        convertSeconds(94680078);
+//        System.out.println("\n--- 63 segundos ---");
+//        convertSeconds(63);
+//        System.out.println("\n--- 71 segundos ---");
+//        convertSeconds(71);
     }
+
 
     private static double areaTriangle(double height, double base) {
         return (base * height) / 2;
@@ -166,6 +178,16 @@ public class Exercises {
     private static String requestString(String message) {
         System.out.print(message);
         return sc.nextLine();
+    }
+
+    private static void percentWomen(List<String> women) {
+        int womenCounter = 0;
+        for (String currentWoman : women) {
+            if (currentWoman.toLowerCase().endsWith("a")) {
+                womenCounter++;
+            }
+        }
+        System.out.println("Women: " + (womenCounter * 100) / women.size() + "%.");
     }
 
     private static void convertSeconds(int aSeconds) {
