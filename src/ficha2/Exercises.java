@@ -44,8 +44,9 @@ public class Exercises {
         women.add("Carlos");
         women.add("ANA");
         women.add("Roberto");
-        System.out.println("List : " + women);
         percentWomen(women);
+        percentWomen(List.of(new String[]{"Ana", "Cristina", "Carla"}));
+        percentWomen(List.of(new String[]{"João", "Carlos", "Daniel"}));
 
 
 //        System.out.println("\n------- Exercise 9 -------");
@@ -180,14 +181,15 @@ public class Exercises {
         return sc.nextLine();
     }
 
-    private static void percentWomen(List<String> women) {
+    private static void percentWomen(List<String> people) {
         int womenCounter = 0;
-        for (String currentWoman : women) {
-            if (currentWoman.toLowerCase().endsWith("a")) {
+        for (String person : people) {
+            if (person.toLowerCase().endsWith("a")) {
                 womenCounter++;
             }
         }
-        System.out.println("Women: " + (womenCounter * 100) / women.size() + "%.");
+        System.out.println("List: " + people);
+        System.out.println("Women: " + (womenCounter * 100) / people.size() + "%.");
     }
 
     private static void convertSeconds(int aSeconds) {
