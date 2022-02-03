@@ -1,6 +1,6 @@
-# laboratorio-programacao
+# Laboratório - programação
 
-# ficha de exercícios 2
+# Ficha de exercícios 2
 
 <p><b>Ex. 1:</b> Crie uma função chamada areaTriang que recebe dois argumentos (altura e base) e  retorna a área do triangulo.</p>
 
@@ -29,5 +29,4 @@
 <br>Hour: 1
 <br>Minute: 0
 <br>Seconds: 1
-
-</p></p>
+</p>
