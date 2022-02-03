@@ -30,23 +30,23 @@
 <p><b>Ex. 3:</b> Crie uma classe Casa, a qual deverá ter os seguintes atributos e métodos:</p>
 
 <ol type="a">
-<li> Um atributo privado de tipo String, morada, para a morada da casa.
-<li> Dois atributos de acesso privado, precoCusto e precoVenda, com tipo double, para  conterem respetivamente o preço de custo e o preço de venda da casa.
-<br>c) Um construtor de instâncias da classe, sem argumentos, que cria uma casa.
-<br>d) Um construtor de instâncias da classe que recebe por parâmetro a morada da casa e  cria uma casa com essa morada.
-<br>e) Os métodos getters e setters dos três atributos definidos anteriormente.
-<br>f) Um método de instância getMargemLucro() que retorna a margem de lucro da casa  (diferença entre o preço de venda e o
-preço de custo). g) Um método de instância getPercentMargemLucro() que retorna a percentagem da margem de lucro (a razão
-entre o preço de venda e o preço de custo).
+<li> Um atributo privado de tipo String, morada, para a morada da casa.</li>
+<li> Dois atributos de acesso privado, precoCusto e precoVenda, com tipo double, para  conterem respetivamente o preço de custo e o preço de venda da casa. </li>
+<li> Um construtor de instâncias da classe, sem argumentos, que cria uma casa. </li>
+<li> Um construtor de instâncias da classe que recebe por parâmetro a morada da casa e  cria uma casa com essa morada. </li>
+<li> Os métodos getters e setters dos três atributos definidos anteriormente.</li>
+
+<li> Um método de instância getMargemLucro() que retorna a margem de lucro da casa  (diferença entre o preço de venda e o preço de custo).</li>
+<li> Um método de instância getPercentMargemLucro() que retorna a percentagem da  margem de lucro (a razão entre o preço de venda e o preço de custo).</li>
 </ol>
 <p>Escreva a função main() para testar a classe Casa. Crie três casas com
 diferentes valores dos seus atributos.</p>
 
+
 <p><b>Ex. 4:</b> Novamente na classe Banco, adicione uma lista de casas. Adicione uma
 função para adicionar uma nova casa. Adicione uma função que recebe a morada de uma casa e remove essa casa da lista de
-casas do Banco. Adicione um método de instância getLucroPrevisto, que retorna a margem de lucro previsto da venda de
+casas do Banco.
+<br>Adicione um método de instância getLucroPrevisto, que retorna a margem de lucro previsto da venda de
 todas as casas.</p>
 
-<p><b>Ex. 5:</b> Faça a modelação do sistema com um diagrama de classes UML que descreve o sistema. Adicione o seu
-projeto ao GitHub e crie um ficheiro README. Adicione ao ficheiro README uma pequena descrição do projeto e adicione o
-diagrama UML (pode encontrar ajuda a escrever o ficheiro README aqui).</p>
+<p><b>Ex. 5:</b> Faça a modelação do sistema com um diagrama de classes UML que descreve o sistema. Adicione o seu projeto ao GitHub e crie um ficheiro README. Adicione ao ficheiro README uma pequena descrição do projeto e adicione o diagrama UML (pode encontrar ajuda a escrever o ficheiro README aqui).</p>
