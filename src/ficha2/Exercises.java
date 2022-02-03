@@ -39,14 +39,14 @@ public class Exercises {
 //        countEachVowel("Lígia Santos ! ");
 
         System.out.println("\n------- Exercise 8 -------");
-        List<String> women = new ArrayList<>();
-        women.add("Joana");
-        women.add("Carlos");
-        women.add("ANA");
-        women.add("Roberto");
-        percentWomen(women);
-        percentWomen(List.of(new String[]{"Ana", "Cristina", "Carla"}));
-        percentWomen(List.of(new String[]{"João", "Carlos", "Daniel"}));
+        List<String> people = new ArrayList<>();
+        people.add("Joana");
+        people.add("Carlos");
+        people.add("ANA");
+        people.add("Roberto");
+        womenPercentage(people);
+        womenPercentage(List.of(new String[]{"Ana", "Cristina", "Carla"}));
+        womenPercentage(List.of(new String[]{"João", "Carlos", "Daniel"}));
 
 
 //        System.out.println("\n------- Exercise 9 -------");
@@ -181,7 +181,7 @@ public class Exercises {
         return sc.nextLine();
     }
 
-    private static void percentWomen(List<String> people) {
+    private static void womenPercentage(List<String> people) {
         int womenCounter = 0;
         for (String person : people) {
             if (person.toLowerCase().endsWith("a")) {
