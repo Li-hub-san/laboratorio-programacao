@@ -33,20 +33,20 @@ public class Exercises {
 //        System.out.println("\n------- Exercise 6 -------");
 //        System.out.println("Número total de vogais: " + numTotalVowels("!!Olá Mundo meu!!"));
 //
-//        System.out.println("\n------- Exercise 7 -------");
-//        countEachVowel("Ana Carolina");
-//        countEachVowel("Lígia Santos");
-//        countEachVowel("Lígia Santos ! ");
+        System.out.println("\n------- Exercise 7 -------");
+        countEachVowel("Ana Carolina");
+        countEachVowel("Lígia Santos");
+        countEachVowel("Lígia Santos ! ");
 
-        System.out.println("\n------- Exercise 8 -------");
-        List<String> people = new ArrayList<>();
-        people.add("Joana");
-        people.add("Carlos");
-        people.add("ANA");
-        people.add("Roberto");
-        womenPercentage(people);
-        womenPercentage(List.of(new String[]{"Ana", "Cristina", "Carla"}));
-        womenPercentage(List.of(new String[]{"João", "Carlos", "Daniel"}));
+//        System.out.println("\n------- Exercise 8 -------");
+//        List<String> people = new ArrayList<>();
+//        people.add("Joana");
+//        people.add("Carlos");
+//        people.add("ANA");
+//        people.add("Roberto");
+//        womenPercentage(people);
+//        womenPercentage(List.of(new String[]{"Ana", "Cristina", "Carla"}));
+//        womenPercentage(List.of(new String[]{"João", "Carlos", "Daniel"}));
 
 
 //        System.out.println("\n------- Exercise 9 -------");
@@ -91,16 +91,17 @@ public class Exercises {
     }
 
     private static int recursiveFactorial(int userInput) {
-        if (userInput > 0) {
-            int recursiveFactorial = recursiveFactorial(userInput - 1);
+        if (userInput == 0) {
+            return 1;
+        }
+        int recursiveFactorial = recursiveFactorial(userInput - 1);
 //      System.out.println("recursiveFactorial(userInput - 1) * userInput");
 //      System.out.println(recursiveFactorial + " " + userInput);
-            int currentFact = recursiveFactorial * userInput;
-            System.out.println(currentFact);
-            return currentFact;
-        }
-        return 1;
+        int currentFact = recursiveFactorial * userInput;
+        System.out.println(currentFact);
+        return currentFact;
     }
+
 
     private static int numTotalVowels(String userExpression) {
         int vowelCount = 0;
@@ -151,11 +152,11 @@ public class Exercises {
             }
         }
 
-        System.out.println("a: " + a);
-        System.out.println("e: " + e);
-        System.out.println("i: " + i);
-        System.out.println("o: " + o);
-        System.out.println("u: " + u);
+        System.out.println("a: " + a +
+                "\ne: " + e +
+                "\ni: " + i +
+                "\no: " + o +
+                "\nu: " + u);
         int totalVowels = a + e + i + o + u;
 
         System.out.println("Total of " + consonant + " consonants and " + totalVowels + " vowels in the expression: " + "'" + expression + "'");
@@ -200,7 +201,15 @@ public class Exercises {
         int minutes = (aSeconds / 60) % 60;
         int seconds = aSeconds % 60;
 
-        System.out.println("years: " + years + "\nmonths: " + months + "\ndays: " + days + "\nhours: " + hours + "\nminutes: " + minutes + "\nseconds: " + seconds);
+        System.out.println("years: " + years +
+                "\nmonths: " + months +
+                "\ndays: " + days +
+                "\nhours: " + hours +
+                "\nminutes: " + minutes +
+                "\nseconds: " + seconds);
+    }
+
+    private static void test(int number) {
     }
 
 }
