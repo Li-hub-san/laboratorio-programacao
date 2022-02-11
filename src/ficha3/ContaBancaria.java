@@ -6,27 +6,40 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class ContaBancária {
+public class ContaBancaria {
     private String titular;
     private double saldo;
     private Date dataAbertura;
 
-    public ContaBancária(String titular) {
+
+    public ContaBancaria(String titular) {
         this.titular = titular;
         this.saldo = 0.0;
         this.dataAbertura = new Date();
     }
 
-    public String getInformaçãoConta() throws ParseException {
-        return "Titular: " + titular +
-                "\nSaldo: " + getSaldo() +
-                "\nData Abertura: " +
-                getDataAbertura();
+    @Override
+    public String toString() {
+        return "ContaBancaria{" +
+                "titular='" + titular + '\'' +
+                ", saldo=" + saldo +
+                ", dataAbertura=" + dataAbertura +
+                '}';
     }
 
-    public String getDataAbertura() throws ParseException {
-        Date date = new SimpleDateFormat("yyyy-MM-dd").parse("2012-05-20T09:00:00.000Z");
-        return new SimpleDateFormat("dd/MM/yyyy").format(dataAbertura);
+    public String getInformacaoConta() {
+        DecimalFormat formatarSaldo = new DecimalFormat("0.00");
+        SimpleDateFormat formatarData = new SimpleDateFormat("dd/MM/yyyy");
+
+        return "Titular: " + titular +
+                "\nSaldo: €" + formatarSaldo.format(saldo) +
+                "\nData Abertura: " +
+                formatarData.format(dataAbertura);
+    }
+
+
+    public Date getDataAbertura() {
+        return dataAbertura;
     }
 
     public void depositar(double valorDepositado) {
@@ -41,17 +54,16 @@ public class ContaBancária {
         saldo -= valorLevantado;
     }
 
-    public String getSaldo() {
-        DecimalFormat formatarSaldo = new DecimalFormat("0.00");
-        return formatarSaldo.format(saldo);
+    public double getSaldo() {
+        return saldo;
     }
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
-
     public String getTitular() {
         return titular;
     }
+
 }
