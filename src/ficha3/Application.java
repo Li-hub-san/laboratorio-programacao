@@ -32,7 +32,7 @@ public class Application {
 //        System.out.println("\n----- Informações de conta -----");
 //        System.out.println(conta1.getInformacaoConta());
 
-        System.out.println("\n----- Ficha de exercícios 3: Exercício 2 -----\n");
+        System.out.println("\n----- Ficha de exercícios 3.2 -----\n");
         ContaBancaria conta1 = new ContaBancaria("João");
         ContaBancaria conta2 = new ContaBancaria("Carlos");
         ContaBancaria conta3 = new ContaBancaria("Ana");
@@ -45,6 +45,9 @@ public class Application {
         banco.criaConta(conta3);
         banco.criaConta(conta4);
         banco.criaConta(conta5);
+        System.out.println(banco.getConta("João"));
+        System.out.println(banco.getConta("Maria"));
+        System.out.println(banco.getConta("Carlos"));
         System.out.println(banco.getConta("João"));
     }
 }

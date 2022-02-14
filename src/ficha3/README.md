@@ -2,32 +2,46 @@
 
 # Ficha de exercícios 3
 
-<p><b>Ex. 1:</b> Crie um novo projeto e codifique a classe ContaBancária com os seguintes atributos e  métodos:</p>
-<ol type="a">
-<li> Uma variável de instância de acesso privado, titular, com tipo String.</li>
-<li>Uma variável de instância de acesso privado, saldo, com tipo double, e com valor 0.0  por defeito.</li>
-<li> Uma variável de instância de acesso privado, dataAbertura, com tipo Date, e com  valor por defeito a data de hoje.</li>
-<li> Um construtor de instância da classe que recebe por parâmetro o nome do titular e  cria uma conta bancária para esse titular, na data de hoje, e com saldo zero.</li>
-<li> Os métodos getters e setters para o saldo. E, apenas o método getter para a data de  abertura e para o titular.</li>
-<li> Um método getInformaçãoConta() que retorna uma String com o titular, o saldo da  conta com duas casas decimais e a data de abertura da conta no formato  DD/MM/YYYY. Ex.: Titular: José Fonseca Saldo: €321.50 Data Abertura: 21/2/2017.
-<li> Um método depositar(…) que recebe o valor a depositar na conta (double) e atualiza  o respetivo saldo.</li>
-<li>Um método levantar(…) que recebe o valor a levantar da conta (double) e atualiza o  respetivo saldo. Não devem ser permitidos levantamentos que coloquem o saldo  negativo.
-</li>
-</ol>
-<p>Escreva a função main() para testar a classe ContaBancária. Crie uma conta, efetue  depósitos e levantamentos e imprima no ecrã a informação da conta sempre que atualiza o  saldo.</p>
+##### Ex. 1: Crie um novo projeto e codifique a classe ContaBancária com os seguintes atributos e  métodos:
 
-<p><b>Ex. 2:</b> Codifique a classe Banco com os seguintes atributos e métodos:</p>
-<ol type="a">
-<li> Um nome e um array de contas de objetos do tipo ContaBancária (ver exercício  anterior).</li>
-<li> Um construtor de instâncias da classe, que recebe por parâmetro o nome do banco e que inicializa o array para cem itens.</li>
-<li> Os métodos getters e setters para o array contas.</li>
-<li> O método criaConta(…) que recebe uma contaBancária por parâmetro e acrescenta  ao array.</li>
-<li> O método getConta(…) que recebe o titular por parâmetro e devolve a conta desse  titular.
-</li>
-</ol>
-<p>Escreva a função main() para testar a classe Banco. Crie uma conta, efetue depósitos e  levantamentos e imprima no ecrã a informação da conta sempre que atualiza o saldo.</p>
+a) Uma variável de instância de acesso privado, titular, com tipo String.
 
-<p><b>Ex. 3:</b> Crie uma classe Casa, a qual deverá ter os seguintes atributos e métodos:</p>
+b) Uma variável de instância de acesso privado, saldo, com tipo double, e com valor 0.0 por defeito.
+
+c) Uma variável de instância de acesso privado, dataAbertura, com tipo Date, e com valor por defeito a data de hoje.
+
+d) Um construtor de instância da classe que recebe por parâmetro o nome do titular e cria uma conta bancária para esse
+titular, na data de hoje, e com saldo zero.
+
+e) Os métodos getters e setters para o saldo. E, apenas o método getter para a data de abertura e para o titular.
+
+f) Um método getInformaçãoConta() que retorna uma String com o titular, o saldo da conta com duas casas decimais e a
+data de abertura da conta no formato DD/MM/YYYY. Ex.: Titular: José Fonseca Saldo: €321.50 Data Abertura: 21/2/2017.
+
+g) Um método depositar(…) que recebe o valor a depositar na conta (double) e atualiza o respetivo saldo.
+
+h)Um método levantar(…) que recebe o valor a levantar da conta (double) e atualiza o respetivo saldo. Não devem ser
+permitidos levantamentos que coloquem o saldo negativo.
+
+<p>Escreva a função main() para testar a classe ContaBancária. Crie uma conta, efetue depósitos e levantamentos e imprima no ecrã a informação da conta sempre que atualiza o saldo.</p>
+
+##### Ex. 2: Codifique a classe Banco com os seguintes atributos e métodos:
+
+a) :white_check_mark:Um nome e um array de contas de objetos do tipo ContaBancária (ver exercício anterior).
+
+b) :white_check_mark:Um construtor de instâncias da classe, que recebe por parâmetro o nome do banco e inicializa o
+array para cem itens.
+
+c) :white_check_mark:Os métodos getters e setters para o array contas.
+
+d) :white_check_mark:O método criaConta(…) que recebe uma contaBancária por parâmetro e acrescenta ao array.
+
+e) :white_check_mark:O método getConta(…) que recebe o titular por parâmetro e devolve a conta desse titular.
+
+:white_check_mark:Escreva a função main() para testar a classe Banco. Crie uma conta, efetue depósitos e levantamentos e
+imprima no ecrã a informação da conta sempre que atualiza o saldo.</p>
+
+##### Ex. 3:</b> Crie uma classe Casa, a qual deverá ter os seguintes atributos e métodos:</p>
 
 <ol type="a">
 <li> Um atributo privado de tipo String, morada, para a morada da casa.</li>

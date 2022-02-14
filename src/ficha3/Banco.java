@@ -14,19 +14,20 @@ public class Banco {
         this.contas = new ArrayList<>(100);
     }
 
-    public ContaBancaria getConta(String titular){
-        ContaBancaria conta = contas.get(0);
-
+    public ContaBancaria getConta(String titular) {
         for (int i = 0; i < contas.size(); i++) {
-        ContaBancaria currentAccount = contas.get(i);
-         if (Objects.equals(currentAccount.getTitular(), titular)){
-             conta = currentAccount;
-         }
+            ContaBancaria currentAccount = contas.get(i);
+            if (Objects.equals(currentAccount.getTitular(), titular)) {
+                return currentAccount;
+            }
         }
-        return conta;
+
+        System.out.print("Não existe registo de nenhuma conta com o titular " + titular + " -> ");
+
+        return null;
     }
 
-    public void criaConta(ContaBancaria conta){
+    public void criaConta(ContaBancaria conta) {
         contas.add(conta);
     }
 
