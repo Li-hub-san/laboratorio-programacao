@@ -1,7 +1,6 @@
 package ficha2;
 
 import java.text.Normalizer;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -22,9 +21,9 @@ public class Exercises {
 //        double choice = requestDouble("Input 1 to calculate a triangle area or any other number to calculate the rectangle area: ");
 //        areaCalc(height, base, choice);
 //
-//        System.out.println("\n------- Exercise 4 -------");
-//        int userInput = requestInt("Input a number: ");
-//        System.out.println(userInput + "! = " + calculateFactorial(userInput));
+        System.out.println("\n------- Exercise 4 -------");
+        int userInput = requestInt("Input a number: ");
+        System.out.println(userInput + "! = " + calculateFactorial(userInput));
 //
 //        System.out.println("\n------- Exercise 5 -------");
 //        userInput = requestInt("Input a number: ");
@@ -33,10 +32,10 @@ public class Exercises {
 //        System.out.println("\n------- Exercise 6 -------");
 //        System.out.println("Número total de vogais: " + numTotalVowels("!!Olá Mundo meu!!"));
 //
-        System.out.println("\n------- Exercise 7 -------");
-        countEachVowel("Ana Carolina");
-        countEachVowel("Lígia Santos");
-        countEachVowel("Lígia Santos ! ");
+//        System.out.println("\n------- Exercise 7 -------");
+//        countEachVowel("Ana Carolina");
+//        countEachVowel("Lígia Santos");
+//        countEachVowel("Lígia Santos ! ");
 
 //        System.out.println("\n------- Exercise 8 -------");
 //        List<String> people = new ArrayList<>();
@@ -81,8 +80,14 @@ public class Exercises {
         }
     }
 
+    // exercício 4
     private static int calculateFactorial(int userInput) {
         int factorial = userInput;
+
+        if (factorial == 0) {
+            return 1;
+        }
+        
         for (int i = userInput - 1; i > 0; i--) {
             factorial *= i;
             System.out.println(factorial);
@@ -127,11 +132,15 @@ public class Exercises {
     }
 
     private static boolean isVowelsUsingRegex(String currentLetter) {
-        return Pattern.compile("[aeiou]", Pattern.CASE_INSENSITIVE).matcher(Normalizer.normalize(currentLetter, Normalizer.Form.NFD)).find();
+        return Pattern.compile("[aeiou]", Pattern.CASE_INSENSITIVE)
+                .matcher(Normalizer.normalize(currentLetter, Normalizer.Form.NFD))
+                .find();
     }
 
     private static void countEachVowel(String expression) {
-        String formattedExpression = Normalizer.normalize(expression, Normalizer.Form.NFD).toLowerCase().replaceAll("[^a-z]", "");
+        String formattedExpression = Normalizer.normalize(expression, Normalizer.Form.NFD)
+                .toLowerCase()
+                .replaceAll("[^a-z]", "");
         int a = 0;
         int e = 0;
         int i = 0;
