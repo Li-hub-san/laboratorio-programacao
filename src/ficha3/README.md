@@ -4,42 +4,46 @@
 
 ##### Ex. 1: Crie um novo projeto e codifique a classe ContaBancária com os seguintes atributos e  métodos:
 
-a) Uma variável de instância de acesso privado, titular, com tipo String.
+a) Uma variável de instância de acesso privado, titular, com tipo String :white_check_mark:
 
-b) Uma variável de instância de acesso privado, saldo, com tipo double, e com valor 0.0 por defeito.
+b) Uma variável de instância de acesso privado, saldo, com tipo double, e com valor 0.0 por defeito :white_check_mark:
 
-c) Uma variável de instância de acesso privado, dataAbertura, com tipo Date, e com valor por defeito a data de hoje.
+c) Uma variável de instância de acesso privado, dataAbertura, com tipo Date, e com valor por defeito a data de hoje :
+white_check_mark:
 
 d) Um construtor de instância da classe que recebe por parâmetro o nome do titular e cria uma conta bancária para esse
-titular, na data de hoje, e com saldo zero.
+titular, na data de hoje, e com saldo zero :white_check_mark:
 
-e) Os métodos getters e setters para o saldo. E, apenas o método getter para a data de abertura e para o titular.
+e) Os métodos getters e setters para o saldo. E, apenas o método getter para a data de abertura e para o titular :
+white_check_mark:
 
 f) Um método getInformaçãoConta() que retorna uma String com o titular, o saldo da conta com duas casas decimais e a
-data de abertura da conta no formato DD/MM/YYYY. Ex.: Titular: José Fonseca Saldo: €321.50 Data Abertura: 21/2/2017.
+data de abertura da conta no formato DD/MM/YYYY. Ex.: Titular: José Fonseca Saldo: €321.50 Data Abertura: 21/2/2017 :
+white_check_mark:
 
-g) Um método depositar(…) que recebe o valor a depositar na conta (double) e atualiza o respetivo saldo.
+g) Um método depositar(…) que recebe o valor a depositar na conta (double) e atualiza o respetivo saldo :
+white_check_mark:
 
 h)Um método levantar(…) que recebe o valor a levantar da conta (double) e atualiza o respetivo saldo. Não devem ser
-permitidos levantamentos que coloquem o saldo negativo.
+permitidos levantamentos que coloquem o saldo negativo :white_check_mark:
 
-<p>Escreva a função main() para testar a classe ContaBancária. Crie uma conta, efetue depósitos e levantamentos e imprima no ecrã a informação da conta sempre que atualiza o saldo.</p>
+<p>Escreva a função main() para testar a classe ContaBancária. Crie uma conta, efetue depósitos e levantamentos e imprima no ecrã a informação da conta sempre que atualiza o saldo.</p>:white_check_mark:
 
 ##### Ex. 2: Codifique a classe Banco com os seguintes atributos e métodos:
 
-a) :white_check_mark:Um nome e um array de contas de objetos do tipo ContaBancária (ver exercício anterior).
+a) Um nome e um array de contas de objetos do tipo ContaBancária (ver exercício anterior):white_check_mark:
 
-b) :white_check_mark:Um construtor de instâncias da classe, que recebe por parâmetro o nome do banco e inicializa o
-array para cem itens.
+b) Um construtor de instâncias da classe, que recebe por parâmetro o nome do banco e inicializa o array para cem itens :
+white_check_mark:
 
-c) :white_check_mark:Os métodos getters e setters para o array contas.
+c) Os métodos getters e setters para o array contas :white_check_mark:
 
-d) :white_check_mark:O método criaConta(…) que recebe uma contaBancária por parâmetro e acrescenta ao array.
+d) O método criaConta(…) que recebe uma contaBancária por parâmetro e acrescenta ao array :white_check_mark:
 
-e) :white_check_mark:O método getConta(…) que recebe o titular por parâmetro e devolve a conta desse titular.
+e) O método getConta(…) que recebe o titular por parâmetro e devolve a conta desse titular :white_check_mark:
 
-:white_check_mark:Escreva a função main() para testar a classe Banco. Crie uma conta, efetue depósitos e levantamentos e
-imprima no ecrã a informação da conta sempre que atualiza o saldo.</p>
+Escreva a função main() para testar a classe Banco. Crie uma conta, efetue depósitos e levantamentos e imprima no ecrã a
+informação da conta sempre que atualiza o saldo :white_check_mark:
 
 ##### Ex. 3:</b> Crie uma classe Casa, a qual deverá ter os seguintes atributos e métodos:</p>
 
