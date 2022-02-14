@@ -23,7 +23,7 @@ data de abertura da conta no formato DD/MM/YYYY. Ex.: Titular: José Fonseca Sal
 :white_check_mark: h) Um método levantar(…) que recebe o valor a levantar da conta (double) e atualiza o respetivo saldo. Não devem ser
 permitidos levantamentos que coloquem o saldo negativo.
 
-<p>Escreva a função main() para testar a classe ContaBancária. Crie uma conta, efetue depósitos e levantamentos e imprima no ecrã a informação da conta sempre que atualiza o saldo.</p>:white_check_mark:
+:white_check_mark: Escreva a função main() para testar a classe ContaBancária. Crie uma conta, efetue depósitos e levantamentos e imprima no ecrã a informação da conta sempre que atualiza o saldo.
 
 ### Ex. 2: Codifique a classe Banco com os seguintes atributos e métodos:
 
@@ -37,8 +37,8 @@ d) O método criaConta(…) que recebe uma contaBancária por parâmetro e acres
 
 e) O método getConta(…) que recebe o titular por parâmetro e devolve a conta desse titular :white_check_mark:
 
-Escreva a função main() para testar a classe Banco. Crie uma conta, efetue depósitos e levantamentos e imprima no ecrã a
-informação da conta sempre que atualiza o saldo :white_check_mark:
+:white_check_mark: Escreva a função main() para testar a classe Banco. Crie uma conta, efetue depósitos e levantamentos e imprima no ecrã a
+informação da conta sempre que atualiza o saldo.
 
 ### Exercício 3:
 
@@ -74,4 +74,4 @@ diferentes valores dos seus atributos.
 
 ### Exercício 5:
 
-Faça a modelação do sistema com um diagrama de classes UML que descreve o sistema. Adicione o seu projeto ao GitHub e crie um ficheiro README. Adicione ao ficheiro README uma pequena descrição do projeto e adicione o diagrama UML (pode encontrar ajuda a escrever o ficheiro README aqui).</p>
+:white_check_mark: Faça a modelação do sistema com um diagrama de classes UML que descreve o sistema. Adicione o seu projeto ao GitHub e crie um ficheiro README. Adicione ao ficheiro README uma pequena descrição do projeto e adicione o diagrama UML (pode encontrar ajuda a escrever o ficheiro README aqui).
