@@ -19,16 +19,16 @@ public class Exercises {
 //
 //        System.out.println("\n------- Exercise 3 -------");
 //        double choice = requestDouble("Input 1 to calculate a triangle area or any other number to calculate the rectangle area: ");
-//        areaCalc(height, base, choice);
+//        System.out.println("Area: " + areaCalc(height, base, choice));
 //
-        System.out.println("\n------- Exercise 4 -------");
-        int userInput = requestInt("Input a number: ");
-        System.out.println(userInput + "! = " + calculateFactorial(userInput));
+//        System.out.println("\n------- Exercise 4 -------");
+//        int userInput = requestInt("Input a number: ");
+//        System.out.println(userInput + "! = " + calculateFactorial(userInput));
 //
 //        System.out.println("\n------- Exercise 5 -------");
 //        userInput = requestInt("Input a number: ");
 //        System.out.println(userInput + "! = " + recursiveFactorial(userInput));
-
+//
 //        System.out.println("\n------- Exercise 6 -------");
 //        System.out.println("Número total de vogais: " + numTotalVowels("!!Olá Mundo meu!!"));
 //
@@ -36,7 +36,7 @@ public class Exercises {
 //        countEachVowel("Ana Carolina");
 //        countEachVowel("Lígia Santos");
 //        countEachVowel("Lígia Santos ! ");
-
+//
 //        System.out.println("\n------- Exercise 8 -------");
 //        List<String> people = new ArrayList<>();
 //        people.add("Joana");
@@ -46,8 +46,8 @@ public class Exercises {
 //        womenPercentage(people);
 //        womenPercentage(List.of(new String[]{"Ana", "Cristina", "Carla"}));
 //        womenPercentage(List.of(new String[]{"João", "Carlos", "Daniel"}));
-
-
+//
+//
 //        System.out.println("\n------- Exercise 9 -------");
 //        System.out.println("\n--- 3601 segundos ---");
 //        convertSeconds(3601);
@@ -64,20 +64,22 @@ public class Exercises {
     }
 
 
+    // exercício 1
     private static double areaTriangle(double height, double base) {
         return (base * height) / 2;
     }
 
+    // exercício 2
     private static double areaRectangle(double height, double base) {
         return height * base;
     }
 
-    private static void areaCalc(double height, double base, double choice) {
+    // exercício 3
+    private static double areaCalc(double height, double base, double choice) {
         if (choice == 1) {
-            System.out.println("Triangle area: " + areaTriangle(height, base));
-        } else {
-            System.out.println("Rectangle area: " + areaRectangle(height, base));
+            return areaTriangle(height, base);
         }
+        return areaRectangle(height, base);
     }
 
     // exercício 4
@@ -87,7 +89,7 @@ public class Exercises {
         if (factorial == 0) {
             return 1;
         }
-        
+
         for (int i = userInput - 1; i > 0; i--) {
             factorial *= i;
             System.out.println(factorial);
@@ -95,6 +97,7 @@ public class Exercises {
         return factorial;
     }
 
+    // exercício 5
     private static int recursiveFactorial(int userInput) {
         if (userInput == 0) {
             return 1;
@@ -107,7 +110,7 @@ public class Exercises {
         return currentFact;
     }
 
-
+    // exercício 6
     private static int numTotalVowels(String userExpression) {
         int vowelCount = 0;
 
@@ -122,6 +125,12 @@ public class Exercises {
         return vowelCount;
     }
 
+    private static boolean isVowelsUsingRegex(String currentLetter) {
+        return Pattern.compile("[aeiou]", Pattern.CASE_INSENSITIVE)
+                .matcher(Normalizer.normalize(currentLetter, Normalizer.Form.NFD))
+                .find();
+    }
+
     private static boolean isVowel(String currentLetter) {
         switch (Normalizer.normalize(currentLetter.toLowerCase(), Normalizer.Form.NFD)) {
             case "a", "e", "i", "o", "u" -> {
@@ -131,12 +140,7 @@ public class Exercises {
         return false;
     }
 
-    private static boolean isVowelsUsingRegex(String currentLetter) {
-        return Pattern.compile("[aeiou]", Pattern.CASE_INSENSITIVE)
-                .matcher(Normalizer.normalize(currentLetter, Normalizer.Form.NFD))
-                .find();
-    }
-
+    // exercício 7
     private static void countEachVowel(String expression) {
         String formattedExpression = Normalizer.normalize(expression, Normalizer.Form.NFD)
                 .toLowerCase()
@@ -191,6 +195,7 @@ public class Exercises {
         return sc.nextLine();
     }
 
+    // exercício 8
     private static void womenPercentage(List<String> people) {
         int womenCounter = 0;
         for (String person : people) {
@@ -202,6 +207,7 @@ public class Exercises {
         System.out.println("Women: " + (womenCounter * 100) / people.size() + "%.");
     }
 
+    // exercício 9
     private static void convertSeconds(int aSeconds) {
         int years = (aSeconds / (60 * 60 * 24 * 30 * 12));
         int months = (aSeconds / (60 * 60 * 24 * 30)) % 12;
@@ -216,9 +222,6 @@ public class Exercises {
                 "\nhours: " + hours +
                 "\nminutes: " + minutes +
                 "\nseconds: " + seconds);
-    }
-
-    private static void test(int number) {
     }
 
 }
