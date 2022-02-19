@@ -45,6 +45,17 @@ public class Banco {
     }
 
     public void removeCasa(String morada) {
+//        casas.stream()
+//                .filter(casa -> Objects.equals(casa.getMorada(), morada))
+//                .peek(casa -> casas.remove(casa));
+//
+//        for (Casa casa : casas) {
+//            if (casa.getMorada().equals(morada)) {
+//                casas.remove(casa);
+//                return;
+//            }
+//        }
+
         for (int i = 0; i < casas.size(); i++) {
             Casa casa = casas.get(i);
             if (Objects.equals(casa.getMorada(), morada)) {

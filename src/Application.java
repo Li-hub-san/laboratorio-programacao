@@ -1,4 +1,5 @@
-package ficha3;
+import ficha3.Banco;
+import ficha3.Casa;
 
 import java.text.ParseException;
 
