@@ -6,9 +6,9 @@
 
 **Crie um novo projeto e codifique a classe `ContaBancária` com os seguintes atributos e métodos:**
 
-:white_check_mark: a) Uma variável de instância de acesso privado, titular, com tipo `String`.
+:white_check_mark: a) Uma variável de instância de acesso privado, `titular`, com tipo `String`.
 
-:white_check_mark: b) Uma variável de instância de acesso privado, saldo, com tipo `double`, e com valor 0.0 por defeito.
+:white_check_mark: b) Uma variável de instância de acesso privado, `saldo`, com tipo `double`, e com valor 0.0 por defeito.
 
 :white_check_mark: c) Uma variável de instância de acesso privado, `dataAbertura`, com tipo `Date`, e com valor por defeito a data de hoje.
 
