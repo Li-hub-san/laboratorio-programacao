@@ -11,7 +11,7 @@ O enunciado do projecto encontra-se abaixo, sub-dividido pelas diferentes funcio
 
 **Crie um novo projeto e codifique a classe [`ContaBancária`](/src/ficha3/ContaBancaria.java) com os seguintes atributos e métodos:**
 
-:white_check_mark: a) Uma variável de instância de acesso privado, `titular`, com tipo `String`.
+:white_check_mark: a) Uma variável de instância de acesso privado, [`titular`](/src/ficha3/ContaBancaria.java#L9), com tipo `String`.
 
 :white_check_mark: b) Uma variável de instância de acesso privado, `saldo`, com tipo `double`, e com valor 0.0 por defeito.
 
