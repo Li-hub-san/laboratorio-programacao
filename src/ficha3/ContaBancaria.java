@@ -1,7 +1,6 @@
 package ficha3;
 
 import java.text.DecimalFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -43,16 +42,28 @@ public class ContaBancaria {
     }
 
     public void depositar(double valorDepositado) {
+        if (valorDepositado <= 0) {
+            System.out.println("Montante tem que ser positivo");
+            return;
+        }
+
         saldo += valorDepositado;
     }
 
     public void levantar(double valorLevantado) {
+        if (valorLevantado <= 0) {
+            System.out.println("Montante tem que ser positivo");
+            return;
+        }
+
         if (valorLevantado > saldo) {
             System.out.println("Saldo insuficiente!");
             return;
         }
+
         saldo -= valorLevantado;
     }
+
 
     public double getSaldo() {
         return saldo;
@@ -65,5 +76,6 @@ public class ContaBancaria {
     public String getTitular() {
         return titular;
     }
+
 
 }
