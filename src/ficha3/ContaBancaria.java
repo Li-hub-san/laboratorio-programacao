@@ -19,11 +19,7 @@ public class ContaBancaria {
 
     @Override
     public String toString() {
-        return "ContaBancaria{" +
-                "titular='" + titular + '\'' +
-                ", saldo=" + saldo +
-                ", dataAbertura=" + dataAbertura +
-                '}';
+        return "ContaBancaria{" + getInformacaoConta();
     }
 
     public String getInformacaoConta() {
