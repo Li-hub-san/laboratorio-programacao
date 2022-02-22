@@ -40,6 +40,7 @@ Na classe principal, crie um cesto e insira vários tipos de fruta. Teste todos 
 
 Ex. 3: 
 
+
 Toda a fruta a peso e toda a fruta a volume podem ter um desconto de uma
 determinada percentagem. Crie uma interface Descontavel que tem um método double
 descontar(double percentagem) que será implementado pela classe FrutaPeso e pela class
