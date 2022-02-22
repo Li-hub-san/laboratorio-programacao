@@ -13,14 +13,14 @@ O enunciado do projecto encontra-se abaixo, sub-dividido pelas diferentes funcio
 
 :white_check_mark: a) Uma variável de instância de acesso privado, [`titular`](/src/ficha3/ContaBancaria.java#L9), com tipo `String`.
 
-:white_check_mark: b) Uma variável de instância de acesso privado, `saldo`, com tipo `double`, e com valor 0.0 por defeito.
+:white_check_mark: b) Uma variável de instância de acesso privado, [`saldo`](/src/ficha3/ContaBancaria.java#L10), com tipo `double`, e com valor 0.0 por defeito.
 
-:white_check_mark: c) Uma variável de instância de acesso privado, `dataAbertura`, com tipo `Date`, e com valor por defeito a data de hoje.
+:white_check_mark: c) Uma variável de instância de acesso privado, [`dataAbertura`](/src/ficha3/ContaBancaria.java#L101), com tipo `Date`, e com valor por defeito a data de hoje.
 
-:white_check_mark: d) Um `construtor` de instância da classe que recebe por parâmetro o nome do titular e cria uma conta bancária para esse
+:white_check_mark: d) Um [`construtor`](/src/ficha3/ContaBancaria.java#L13) de instância da classe que recebe por parâmetro o nome do titular e cria uma conta bancária para esse
 titular, na data de hoje, e com saldo zero.
 
-:white_check_mark: e) Os métodos `getters` e `setters` para o saldo. E, apenas o método `getter` para a data de abertura e para o titular.
+:white_check_mark: e) Os métodos [`getters`](/src/ficha3/ContaBancaria.java#L62) e [`setters`](/src/ficha3/ContaBancaria.java#L66) para o saldo. E, apenas o método [`getter`](/src/ficha3/ContaBancaria.java#L35) para a data de abertura e o método [`getter`](/src/ficha3/ContaBancaria.java#L70) para o titular.
 
 :white_check_mark: f) Um método `getInformaçãoConta()` que retorna uma String com o titular, o saldo da conta com duas casas decimais e a
 data de abertura da conta no formato DD/MM/YYYY. Ex.: Titular: José Fonseca Saldo: €321.50 Data Abertura: 21/2/2017.
