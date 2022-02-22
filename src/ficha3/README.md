@@ -1,5 +1,10 @@
 # Laboratório — programação
 
+Este projecto foi realizado no âmbito da disciplina laboratório de programação, leccionada no curso de programação Java oferecido pela Startup Madeira na iniciativa Requalificar + Digital.
+O objectivo é modelar as classes `ContaBancaria`, `Banco` e `Casa` e gerar interações entre as mesmas.
+
+O enunciado do projecto encontra-se abaixo, sub-dividido pelas diferentes funcionalidades requeridas.
+
 ## Ficha de exercícios 3
 
 ### Exercício 1: 
