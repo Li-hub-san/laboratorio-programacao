@@ -80,5 +80,5 @@ diferentes valores dos seus atributos.
 
 :white_check_mark: **Faça a modelação do sistema com um diagrama de classes `UML` que descreve o sistema. Adicione o seu projeto ao GitHub e crie um ficheiro `README`. Adicione ao ficheiro `README` uma pequena descrição do projeto e adicione o diagrama `UML` (pode encontrar ajuda a escrever o ficheiro README aqui).**
 
-### Diagrama de Classes
+## Diagrama de Classes
 ![Diagrama de classes](/src/ficha3/uml-ficha3.png)
