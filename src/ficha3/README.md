@@ -34,7 +34,7 @@ permitidos levantamentos que coloquem o saldo negativo.
 
 ### Exercício 2:
 
-**Codifique a classe `Banco` com os seguintes atributos e métodos:**
+**Codifique a classe [`Banco`](/src/ficha3/Banco.java) com os seguintes atributos e métodos:**
 
 :white_check_mark: a) Um nome e um array de contas de objetos do tipo `ContaBancária` (ver exercício anterior).
 
@@ -51,7 +51,7 @@ informação da conta sempre que atualiza o saldo.
 
 ### Exercício 3:
 
-**Crie uma classe `Casa`, a qual deverá ter os seguintes atributos e métodos:**
+**Crie uma classe [`Casa`](/src/ficha3/Casa.java), a qual deverá ter os seguintes atributos e métodos:**
 
 :white_check_mark: Um atributo privado do tipo `String`, morada, para a morada da casa.
 
