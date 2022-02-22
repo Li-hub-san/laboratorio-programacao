@@ -20,7 +20,7 @@ O enunciado do projecto encontra-se abaixo, sub-dividido pelas diferentes funcio
 :white_check_mark: d) Um [`construtor`](/src/ficha3/ContaBancaria.java#L13) de instância da classe que recebe por parâmetro o nome do titular e cria uma conta bancária para esse
 titular, na data de hoje, e com saldo zero.
 
-:white_check_mark: e) Os métodos [`getters`](/src/ficha3/ContaBancaria.java#L62) e [`setters`](/src/ficha3/ContaBancaria.java#L66) para o saldo. E, apenas o método [`getter`](/src/ficha3/ContaBancaria.java#L35) para a data de abertura e o método [`getter`](/src/ficha3/ContaBancaria.java#L70) para o titular.
+:white_check_mark: e) Os métodos [`getters`](/src/ficha3/ContaBancaria.java#L62) e [`setters`](/src/ficha3/ContaBancaria.java#L65) para o saldo. E, apenas o método [`getter`](/src/ficha3/ContaBancaria.java#L35) para a data de abertura e o método [`getter`](/src/ficha3/ContaBancaria.java#L70) para o titular.
 
 :white_check_mark: f) Um método [`getInformaçãoConta()`](/src/ficha3/ContaBancaria.java#L24) que retorna uma String com o titular, o saldo da conta com duas casas decimais e a
 data de abertura da conta no formato DD/MM/YYYY. Ex.: Titular: José Fonseca Saldo: €321.50 Data Abertura: 21/2/2017.
