@@ -10,7 +10,6 @@ public class ContaBancaria {
     private double saldo;
     private Date dataAbertura;
 
-
     public ContaBancaria(String titular) {
         this.titular = titular;
         this.saldo = 0.0;
@@ -31,7 +30,6 @@ public class ContaBancaria {
                 "\nData Abertura: " +
                 formatarData.format(dataAbertura);
     }
-
 
     public Date getDataAbertura() {
         return dataAbertura;
@@ -60,7 +58,6 @@ public class ContaBancaria {
         saldo -= valorLevantado;
     }
 
-
     public double getSaldo() {
         return saldo;
     }
@@ -72,6 +69,5 @@ public class ContaBancaria {
     public String getTitular() {
         return titular;
     }
-
 
 }
