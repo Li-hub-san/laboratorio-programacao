@@ -3,14 +3,15 @@ package ficha4;
 public abstract class Fruta {
     protected String nome;
     protected double preco;
-    protected double unidadeMedida;
+    protected double quantidade;
 
-    public Fruta(String nome, double preco) {
+    public Fruta(String nome, double preco, double quantidade) {
         this.nome = nome;
         this.preco = preco;
+        this.quantidade = quantidade;
     }
 
-    public abstract double pagar(double unidadeMedida);
+    public abstract double pagar();
 
     // getters and setters
     public String getNome() {
@@ -29,17 +30,15 @@ public abstract class Fruta {
         this.preco = preco;
     }
 
-    public double getUnidadeMedida() {
-        return unidadeMedida;
+    public double getQuantidade() {
+        return quantidade;
     }
-
 
     @Override
     public String toString() {
         return "Fruta{" +
                 "nome='" + nome + '\'' +
                 ", preco=" + preco +
-                ", unidadeMedida=" + unidadeMedida +
                 '}';
     }
 }

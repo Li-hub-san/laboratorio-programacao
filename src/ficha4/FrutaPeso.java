@@ -1,15 +1,30 @@
 package ficha4;
 
-public class FrutaPeso extends Fruta{
-    private double peso;
+public class FrutaPeso extends Fruta {
+    private final double peso;
 
-    public FrutaPeso(String nome, double preco) {
-        super(nome, preco);
-        this.peso = peso;
+    public FrutaPeso(String nome, double preco, double quantidade) {
+        super(nome, preco, quantidade);
+        this.peso = quantidade;
+    }
+
+
+    @Override
+    public double pagar() {
+        return preco * peso;
     }
 
     @Override
-    public double pagar(double peso) {
-        return preco * peso;
+    public String toString() {
+        return "FrutaPeso{" +
+                "nome='" + nome + '\'' +
+                ", preco=" + preco +
+                "€, peso=" + peso +
+                "kg}";
+    }
+
+    @Override
+    public double getQuantidade() {
+        return peso;
     }
 }
