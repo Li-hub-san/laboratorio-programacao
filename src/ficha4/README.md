@@ -2,27 +2,26 @@
 
 ## Ficha de exercícios 4
 
+## Problema
+
+Crie um novo projeto. Numa loja, toda a fruta vendida tem um nome e um preço base.Porém, a loja vende fruta em três modalidades: à unidade, ao peso ou pelo volume.
+
 ### Exercício 1: 
-Ex. 1:
 
-Crie um novo projeto.
-Numa loja, toda a fruta vendida tem um nome e um preço base.
+:white_check_mark: Crie uma hierarquia onde `Fruta` é uma classe abstrata, com as subclasses `FrutaUnidade`, `FrutaPeso`, e
+`FrutaVolume`.
 
-Porém, a loja vende fruta em três modalidades: à unidade, ao peso ou pelo volume.
-
-Crie uma hierarquia onde Fruta é uma classe abstrata, com as subclasses FrutaUnidade, FrutaPeso, e
-FrutaVolume.
-
-a) A classe abstrata deverá ter as variáveis comuns a todas as subclasses, bem como o
+:white_check_mark: a) A classe abstrata deverá ter as variáveis comuns a todas as subclasses
 método abstrato double pagar(). Inclua os métodos concretos que considerar adequados.
 
-b) Defina as classes FrutaUnidade, FrutaPeso, e FrutaVolume, como subclasses de Fruta,
-dando a adequada implementação ao método double pagar() para cada caso.
-Escreva a função main() para testar as classes acima descritas.
+:white_check_mark: b) Defina as classes `FrutaUnidade`, `FrutaPeso`, e `FrutaVolume`, como subclasses de `Fruta`,
+dando a adequada implementação ao método double `pagar()` para cada caso.
+
+:white_check_mark: Escreva a função `main()` para testar as classes acima descritas.
 
 
 
-Ex. 2:
+### Exercício 2
 Defina a classe Cesto, que representa um conjunto de frutas adquiridas.
 Esta classe deverá implementar o seguinte:
 
