@@ -1,19 +1,21 @@
 package ficha4;
 
-public class FrutaPeso extends Fruta {
-    private float peso;
+public class FrutaPeso extends Fruta implements Descontavel {
+    private final float peso;
+    private double percentagemDesconto;
 
     // FrutaPeso e FrutaVolume terão respetivamente uma variável peso do tipo float e volume
     //do tipo float.
     public FrutaPeso(String nome, double preco, float peso) {
-        super(nome, preco);
+        super(TipoFruta.FrutaPeso, nome, preco);
         this.peso = peso;
     }
 
 
     @Override
     public double pagar() {
-        return preco * peso;
+        double precoTotal = preco * peso;
+        return precoTotal - precoTotal * (double) percentagemDesconto / 100;
     }
 
     @Override
@@ -25,7 +27,16 @@ public class FrutaPeso extends Fruta {
                 "kg}";
     }
 
-    public double getPeso() {
+    public float getPeso() {
         return peso;
+    }
+
+    public void setPercentagemDesconto(double percentagemDesconto) {
+        this.percentagemDesconto = percentagemDesconto;
+    }
+
+    @Override
+    public void descontar(double percentagem) {
+        setPercentagemDesconto(percentagem);
     }
 }

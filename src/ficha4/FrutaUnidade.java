@@ -2,11 +2,11 @@ package ficha4;
 
 public class FrutaUnidade extends Fruta {
 
-    private int quantidade;
+    private final int quantidade;
 
     // Nota: a classe FrutaUnidade terá uma variável quantidade do tipo int
     public FrutaUnidade(String nome, double preco, int quantidade) {
-        super(nome, preco);
+        super(TipoFruta.FrutaUnidade, nome, preco);
         this.quantidade = quantidade;
     }
 

@@ -1,13 +1,10 @@
-import ficha3.Banco;
-import ficha3.Casa;
-import ficha3.ContaBancaria;
+package ficha3;
 
-import java.text.ParseException;
 import java.util.Arrays;
 import java.util.List;
 
 public class Application {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) {
 
         testeExercicio1();
         testeExercicio2();

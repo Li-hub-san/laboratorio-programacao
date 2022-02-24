@@ -12,99 +12,96 @@ public class Application {
 
         List<Fruta> frutas = imprimirExercício1();
         imprimirExercício2(frutas);
-
+        imprimirExercício3(frutas);
 
     }
 
     private static List<Fruta> imprimirExercício1() {
         imprimeTitulo(1);
 
-        FrutaUnidade frutaUnidade = new FrutaUnidade("bananas", 0.20, 20);
-        System.out.println(frutaUnidade);
+        imprimeExercicio("Instanciação das frutas");
+        FrutaUnidade unidade1 = new FrutaUnidade("bananas", 0.20, 20);
+        System.out.println(unidade1);
 
-        FrutaPeso frutaAoPeso = new FrutaPeso("laranjas", 0.99, 1.5f);
-        System.out.println(frutaAoPeso);
+        FrutaPeso peso1 = new FrutaPeso("laranjas", 0.99, 1.5f);
+        System.out.println(peso1);
 
-        FrutaVolume frutaVolume = new FrutaVolume("tangerinas", 20, 2);
-        System.out.println(frutaVolume);
+        FrutaVolume volume1 = new FrutaVolume("tangerinas", 20, 2);
+        System.out.println(volume1);
 
-        FrutaVolume fruta1 = new FrutaVolume("cerejas", -50, -5);
-        System.out.println(fruta1);
+        FrutaVolume volume2 = new FrutaVolume("cerejas", 50, 5);
+        System.out.println(volume2);
 
-        imprimeExercicio("Valor das frutas por tipo");
-        imprimeValorMonetario(frutaUnidade.pagar());
-        imprimeValorMonetario(frutaAoPeso.pagar());
-        imprimeValorMonetario(frutaVolume.pagar());
-        imprimeValorMonetario(fruta1.pagar());
+        imprimeExercicio("Valor das frutas");
+        System.out.println(unidade1.getNome() + " - " + paraDuasCasas(unidade1.pagar()));
+        System.out.println(peso1.getNome() + " - " + paraDuasCasas(peso1.pagar()));
+        System.out.println(volume1.getNome() + " - " + paraDuasCasas(volume1.pagar()));
+        System.out.println(volume2.getNome() + " - " + paraDuasCasas(volume2.pagar()));
 
-        return Arrays.asList(frutaUnidade, frutaAoPeso, frutaVolume, fruta1);
+        return Arrays.asList(unidade1, peso1, volume1, volume2);
     }
 
     private static void imprimirExercício2(List<Fruta> frutas) {
         imprimeTitulo(2);
-
         Cesto cesto = new Cesto();
+
+        imprimeExercicio("a) Capacidade total do cesto");
+        System.out.println(cesto.getCapacidadeTotal());
+
+        imprimeExercicio("a) Conteudo do cesto -> frutas");
+        System.out.println(cesto.getFrutas());
+
+        imprimeExercicio("b) Inserir itens no cesto");
+        System.out.println("Total frutas antes: " + cesto.totalFrutas());
         for (Fruta fruta : frutas) {
             cesto.adicionarFruta(fruta);
         }
+        System.out.println("Total frutas depois: " + cesto.totalFrutas());
+        System.out.println("Lista do cesto: " + cesto.getFrutas());
 
-        imprimeExercicio("Capacidade total do cesto");
-        System.out.println(cesto.getCapacidadeTotal());
-
-        imprimeExercicio("Total de itens no cesto");
+        imprimeExercicio("c) Total de itens no cesto");
         System.out.println(cesto.totalFrutas());
 
-        imprimeExercicio("Valor total do cesto");
-        paraValorMonetario(cesto.precoTotalNoCesto());
+        imprimeExercicio("c) Valor total do cesto");
+        imprimeValorMonetario(cesto.precoTotalNoCesto());
 
-        imprimeExercicio("Conteudo do cesto -> frutas");
-        System.out.println(cesto.getFrutas());
-
-        imprimeExercicio("Numero de frutas do mesmo tipo");
+        imprimeExercicio("d) Numero de frutas do mesmo tipo");
 //        System.out.println(cesto.teste(FrutaVolume.class));
-        System.out.println("bananas: " + cesto.numeroDeFrutasMesmoTipo("bananas"));
-        System.out.println("tangerinas: " + cesto.numeroDeFrutasMesmoTipo("tangerinas"));
-        System.out.println("laranjas: " + cesto.numeroDeFrutasMesmoTipo("laranjas"));System.out.println("cerejas: " + cesto.numeroDeFrutasMesmoTipo("cerejas"));System.out.println("peras: " + cesto.numeroDeFrutasMesmoTipo("peras"));
-
-        imprimeExercicio("Valor a pagar em frutas do mesmo tipo");
-        System.out.println("Bananas: " + paraValorMonetario(cesto.valorGastoTipoFruta("bananas")));
-        System.out.println("laranjas: " + paraValorMonetario(cesto.valorGastoTipoFruta("laranjas")));
-        System.out.println("tangerinas: " + paraValorMonetario(cesto.valorGastoTipoFruta("tangerinas")));
-        System.out.println("cerejas: " + paraValorMonetario(cesto.valorGastoTipoFruta("cerejas")));
-        System.out.println("Peras: " + paraValorMonetario(cesto.valorGastoTipoFruta("peras")));
-
-//        for (Fruta fruta : frutas) {
-//            if (fruta instanceof FrutaUnidade) {
-//                System.out.println("Fruta à unidade: " + fruta.getQuantidade());
-//            }
-//
-//            if (fruta instanceof FrutaVolume) {
-//                System.out.println("Fruta ao volume: " + fruta.getQuantidade());
-//            }
-//
-//            if (fruta instanceof FrutaPeso) {
-//                System.out.println("Fruta ao peso: " + fruta.getQuantidade());
-//            }
-//        }
+        System.out.println("FrutaUnidade: " + cesto.numeroDeFrutasMesmoTipo("FrutaUnidade"));
+        System.out.println("FrutaVolume: " + cesto.numeroDeFrutasMesmoTipo("FrutaVolume"));
+        System.out.println("FrutaPeso: " + cesto.numeroDeFrutasMesmoTipo("FrutaPeso"));
 
 
-//        System.out.println("Fruta à unidade -> valor a pagar: " + cesto.valorGastoTipoFruta("bananas") + "€");
+        imprimeExercicio("e) Valor a pagar em frutas do mesmo tipo");
+        System.out.println("FrutaUnidade: " + paraDuasCasas(cesto.valorGastoTipoFruta("FrutaUnidade")));
+        System.out.println("FrutaVolume: " + paraDuasCasas(cesto.valorGastoTipoFruta("FrutaVolume")));
+        System.out.println("FrutaPeso: " + paraDuasCasas(cesto.valorGastoTipoFruta("FrutaPeso")));
+    }
 
-//        System.out.println("Fruta ao volume -> valor a pagar: " + cesto.valorGastoTipoFruta(frutaVolume) + "€");
-//        System.out.println("Fruta ao peso -> valor a pagar: " + cesto.valorGastoTipoFruta(frutaAoPeso) + "€");
+    public static void imprimirExercício3(List<Fruta> frutas) {
 
-        System.out.println("Custo total do cesto: " + cesto.precoTotalNoCesto() + " €");
+        imprimeTitulo(3);
+        imprimeExercicio("Descontos");
+
+        frutas.forEach(fruta -> {
+            System.out.println("Antes -> " + fruta.getTipo() + " : " + paraDuasCasas(fruta.pagar()));
+            if (fruta instanceof FrutaPeso || fruta instanceof FrutaVolume) {
+                ((Descontavel) fruta).descontar(15);
+            }
+            System.out.println("Depois: " + paraDuasCasas(fruta.pagar()));
+        });
+
     }
 
     private static void imprimeTitulo(int numeroExercicio) {
-        System.out.println("\n****** FICHA 4 -> EXERCÍCIO: " + numeroExercicio + " *****\n");
+        System.out.println("\n****** FICHA 4 -> EXERCÍCIO: " + numeroExercicio + " ******");
     }
 
     private static void imprimeExercicio(String tituloExercicio) {
         System.out.println("\n-------- " + tituloExercicio + " --------");
     }
 
-    private static String paraValorMonetario(double montante) {
+    private static String paraDuasCasas(double montante) {
         return doubleDigit.format(montante) + "€";
     }
 

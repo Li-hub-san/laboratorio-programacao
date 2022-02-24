@@ -1,10 +1,12 @@
 package ficha4;
 
 public abstract class Fruta {
+    private final TipoFruta tipo;
     protected String nome;
     protected double preco;
 
-    public Fruta(String nome, double preco) {
+    public Fruta(TipoFruta tipo, String nome, double preco) {
+        this.tipo = tipo;
         this.nome = nome;
         this.preco = preco;
     }
@@ -12,6 +14,10 @@ public abstract class Fruta {
     public abstract double pagar();
 
     // getters and setters
+    public TipoFruta getTipo() {
+        return tipo;
+    }
+
     public String getNome() {
         return nome;
     }
