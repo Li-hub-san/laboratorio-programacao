@@ -1,17 +1,19 @@
 package ficha4;
 
 public class FrutaUnidade extends Fruta {
-    private final double unidade;
 
-    public FrutaUnidade(String nome, double preco, double quantidade) {
-        super(nome, preco, quantidade);
-        this.unidade = quantidade;
+    private int quantidade;
+
+    // Nota: a classe FrutaUnidade terá uma variável quantidade do tipo int
+    public FrutaUnidade(String nome, double preco, int quantidade) {
+        super(nome, preco);
+        this.quantidade = quantidade;
     }
 
 
     @Override
     public double pagar() {
-        return preco * unidade;
+        return preco * quantidade;
     }
 
     @Override
@@ -19,6 +21,13 @@ public class FrutaUnidade extends Fruta {
         return "FrutaUnidade{" +
                 "nome='" + nome + '\'' +
                 ", preco=" + preco +
-                "€, unidade(s)=" + unidade + "}";
+                "€, unidade(s)=" + quantidade + "}";
     }
+
+    // getters and setters
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
 }

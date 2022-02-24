@@ -2,11 +2,13 @@ package ficha4;
 
 public class FrutaVolume extends Fruta {
 
-    private final double volume;
+    // FrutaPeso e FrutaVolume terão respetivamente uma variável peso do tipo float e volume
+    //do tipo float.
+    private float volume;
 
-    public FrutaVolume(String nome, double preco, double quantidade) {
-        super(nome, preco, quantidade);
-        this.volume = quantidade;
+    public FrutaVolume(String nome, double preco, float volume) {
+        super(nome, preco );
+        this.volume = volume;
     }
 
 
@@ -24,8 +26,7 @@ public class FrutaVolume extends Fruta {
                 "}";
     }
 
-    @Override
-    public double getQuantidade() {
+    public double getVolume() {
         return volume;
     }
 }

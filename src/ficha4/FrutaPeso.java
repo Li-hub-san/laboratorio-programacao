@@ -1,11 +1,13 @@
 package ficha4;
 
 public class FrutaPeso extends Fruta {
-    private final double peso;
+    private float peso;
 
-    public FrutaPeso(String nome, double preco, double quantidade) {
-        super(nome, preco, quantidade);
-        this.peso = quantidade;
+    // FrutaPeso e FrutaVolume terão respetivamente uma variável peso do tipo float e volume
+    //do tipo float.
+    public FrutaPeso(String nome, double preco, float peso) {
+        super(nome, preco);
+        this.peso = peso;
     }
 
 
@@ -23,8 +25,7 @@ public class FrutaPeso extends Fruta {
                 "kg}";
     }
 
-    @Override
-    public double getQuantidade() {
+    public double getPeso() {
         return peso;
     }
 }

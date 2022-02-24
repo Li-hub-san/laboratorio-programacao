@@ -3,12 +3,10 @@ package ficha4;
 public abstract class Fruta {
     protected String nome;
     protected double preco;
-    protected double quantidade;
 
-    public Fruta(String nome, double preco, double quantidade) {
+    public Fruta(String nome, double preco) {
         this.nome = nome;
         this.preco = preco;
-        this.quantidade = quantidade;
     }
 
     public abstract double pagar();
@@ -28,10 +26,6 @@ public abstract class Fruta {
 
     public void setPreco(double preco) {
         this.preco = preco;
-    }
-
-    public double getQuantidade() {
-        return quantidade;
     }
 
     @Override

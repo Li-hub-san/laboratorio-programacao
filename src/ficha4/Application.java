@@ -22,7 +22,7 @@ public class Application {
         FrutaUnidade frutaUnidade = new FrutaUnidade("bananas", 0.20, 20);
         System.out.println(frutaUnidade);
 
-        FrutaPeso frutaAoPeso = new FrutaPeso("laranjas", 0.99, 1.5);
+        FrutaPeso frutaAoPeso = new FrutaPeso("laranjas", 0.99, 1.5f);
         System.out.println(frutaAoPeso);
 
         FrutaVolume frutaVolume = new FrutaVolume("tangerinas", 20, 2);
@@ -55,13 +55,23 @@ public class Application {
         System.out.println(cesto.totalFrutas());
 
         imprimeExercicio("Valor total do cesto");
-        imprimeValorMonetario(cesto.precoTotalNoCesto());
+        paraValorMonetario(cesto.precoTotalNoCesto());
 
         imprimeExercicio("Conteudo do cesto -> frutas");
         System.out.println(cesto.getFrutas());
 
         imprimeExercicio("Numero de frutas do mesmo tipo");
-        System.out.println(cesto.teste(FrutaVolume.class));
+//        System.out.println(cesto.teste(FrutaVolume.class));
+        System.out.println("bananas: " + cesto.numeroDeFrutasMesmoTipo("bananas"));
+        System.out.println("tangerinas: " + cesto.numeroDeFrutasMesmoTipo("tangerinas"));
+        System.out.println("laranjas: " + cesto.numeroDeFrutasMesmoTipo("laranjas"));System.out.println("cerejas: " + cesto.numeroDeFrutasMesmoTipo("cerejas"));System.out.println("peras: " + cesto.numeroDeFrutasMesmoTipo("peras"));
+
+        imprimeExercicio("Valor a pagar em frutas do mesmo tipo");
+        System.out.println("Bananas: " + paraValorMonetario(cesto.valorGastoTipoFruta("bananas")));
+        System.out.println("laranjas: " + paraValorMonetario(cesto.valorGastoTipoFruta("laranjas")));
+        System.out.println("tangerinas: " + paraValorMonetario(cesto.valorGastoTipoFruta("tangerinas")));
+        System.out.println("cerejas: " + paraValorMonetario(cesto.valorGastoTipoFruta("cerejas")));
+        System.out.println("Peras: " + paraValorMonetario(cesto.valorGastoTipoFruta("peras")));
 
 //        for (Fruta fruta : frutas) {
 //            if (fruta instanceof FrutaUnidade) {
@@ -78,7 +88,7 @@ public class Application {
 //        }
 
 
-        System.out.println("Fruta à unidade -> valor a pagar: " + cesto.valorGastoTipoFruta("bananas") + "€");
+//        System.out.println("Fruta à unidade -> valor a pagar: " + cesto.valorGastoTipoFruta("bananas") + "€");
 
 //        System.out.println("Fruta ao volume -> valor a pagar: " + cesto.valorGastoTipoFruta(frutaVolume) + "€");
 //        System.out.println("Fruta ao peso -> valor a pagar: " + cesto.valorGastoTipoFruta(frutaAoPeso) + "€");
@@ -92,6 +102,10 @@ public class Application {
 
     private static void imprimeExercicio(String tituloExercicio) {
         System.out.println("\n-------- " + tituloExercicio + " --------");
+    }
+
+    private static String paraValorMonetario(double montante) {
+        return doubleDigit.format(montante) + "€";
     }
 
     private static void imprimeValorMonetario(double montante) {
