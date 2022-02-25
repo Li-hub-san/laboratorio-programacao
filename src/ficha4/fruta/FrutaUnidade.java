@@ -1,4 +1,4 @@
-package ficha4;
+package ficha4.fruta;
 
 public class FrutaUnidade extends Fruta {
 

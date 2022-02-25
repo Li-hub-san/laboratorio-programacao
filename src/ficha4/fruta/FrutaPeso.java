@@ -1,4 +1,4 @@
-package ficha4;
+package ficha4.fruta;
 
 public class FrutaPeso extends Fruta implements Descontavel {
     private final float peso;
@@ -11,10 +11,14 @@ public class FrutaPeso extends Fruta implements Descontavel {
         this.peso = peso;
     }
 
-
     @Override
     public double pagar() {
         return preco * peso - descontar();
+    }
+
+    @Override
+    public double descontar() {
+        return (preco * peso) * percentagemDesconto / 100;
     }
 
     @Override
@@ -26,16 +30,18 @@ public class FrutaPeso extends Fruta implements Descontavel {
                 "kg}";
     }
 
+    // getters and setters
     public float getPeso() {
         return peso;
     }
 
+    @Override
     public void setPercentagemDesconto(double percentagemDesconto) {
         this.percentagemDesconto = percentagemDesconto;
     }
 
     @Override
-    public double descontar() {
-        return (preco * peso) * (double) percentagemDesconto / 100;
+    public double getPercentagemDesconto() {
+        return percentagemDesconto;
     }
 }

@@ -1,4 +1,4 @@
-package ficha4;
+package ficha4.fruta;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +57,7 @@ public class Cesto {
     }
 
     // e) 2. Um método que determina o valor total gasto em frutos de um dado tipo.
+    // Feito ENUM só mesmo para testar (mas seria no caso que recebia o enum e não uma String)
     public double valorGastoTipoFruta(String tipoFruta) {
         double valorTotal = 0;
         for (Fruta fruta : frutas) {

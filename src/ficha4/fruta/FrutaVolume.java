@@ -1,4 +1,4 @@
-package ficha4;
+package ficha4.fruta;
 
 public class FrutaVolume extends Fruta implements Descontavel {
 
@@ -15,15 +15,13 @@ public class FrutaVolume extends Fruta implements Descontavel {
     // preço total menos desconto
     @Override
     public double pagar() {
-//        double precoTotal = preco * volume;
-//        return precoTotal - precoTotal * (double) percentagemDesconto / 100;
         return preco * volume - descontar();
     }
 
     // cálculo da percentagem
     @Override
     public double descontar() {
-       return (preco * volume) * (double) percentagemDesconto / 100;
+        return (preco * volume) * (double) percentagemDesconto / 100;
     }
 
     @Override
@@ -36,13 +34,18 @@ public class FrutaVolume extends Fruta implements Descontavel {
     }
 
     // getters and setters
+    public float getVolume() {
+        return volume;
+    }
 
+    @Override
     public void setPercentagemDesconto(double percentagemDesconto) {
         this.percentagemDesconto = percentagemDesconto;
     }
 
-    public float getVolume() {
-        return volume;
+    @Override
+    public double getPercentagemDesconto() {
+        return percentagemDesconto;
     }
 
 }
