@@ -5,17 +5,17 @@ import java.util.List;
 import java.util.Objects;
 
 public class Cesto {
+    private final int CAP_MAX = 100;
     private int totalItens;
-    private final int capacidadeTotal;
     List<Fruta> frutas;
 
     public Cesto() {
+        this.totalItens = 0;
         this.frutas = new ArrayList<>();
-        this.capacidadeTotal = 100;
     }
 
     public void adicionarFruta(Fruta fruta) {
-        if (frutas.size() < capacidadeTotal) {
+        if (totalItens < CAP_MAX) {
             frutas.add(fruta);
             totalItens++;
         }
@@ -79,8 +79,8 @@ public class Cesto {
         return frutas;
     }
 
-    public int getCapacidadeTotal() {
-        return capacidadeTotal;
+    public int getCAP_MAX() {
+        return CAP_MAX;
     }
 
 }

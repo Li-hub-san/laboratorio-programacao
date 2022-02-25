@@ -46,7 +46,7 @@ public class Application {
         Cesto cesto = new Cesto();
 
         imprimeExercicio("a) Capacidade total do cesto");
-        System.out.println(cesto.getCapacidadeTotal());
+        System.out.println(cesto.getCAP_MAX());
 
         imprimeExercicio("a) Conteudo do cesto -> frutas");
         System.out.println(cesto.getFrutas());
@@ -83,13 +83,13 @@ public class Application {
         imprimeTitulo(3);
         imprimeExercicio("Descontos");
 
-        frutas.forEach(fruta -> {
-            System.out.println("Antes -> " + fruta.getTipo() + " : " + paraDuasCasas(fruta.pagar()));
-            if (fruta instanceof FrutaPeso || fruta instanceof FrutaVolume) {
-                ((Descontavel) fruta).descontar(15);
-            }
-            System.out.println("Depois: " + paraDuasCasas(fruta.pagar()));
-        });
+//        frutas.forEach(fruta -> {
+//            System.out.println("Antes -> " + fruta.getTipo() + " : " + paraDuasCasas(fruta.pagar()));
+//            if (fruta instanceof FrutaPeso || fruta instanceof FrutaVolume) {
+//
+//            }
+//            System.out.println("Depois: " + paraDuasCasas(fruta.pagar()));
+//        });
 
     }
 

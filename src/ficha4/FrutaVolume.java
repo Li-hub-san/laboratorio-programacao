@@ -12,16 +12,18 @@ public class FrutaVolume extends Fruta implements Descontavel {
         this.volume = volume;
     }
 
-
+    // preço total menos desconto
     @Override
     public double pagar() {
-        double precoTotal = preco * volume;
-        return precoTotal - precoTotal * (double) percentagemDesconto / 100;
+//        double precoTotal = preco * volume;
+//        return precoTotal - precoTotal * (double) percentagemDesconto / 100;
+        return preco * volume - descontar();
     }
 
+    // cálculo da percentagem
     @Override
-    public void descontar(double percentagem) {
-        setPercentagemDesconto(percentagem);
+    public double descontar() {
+       return (preco * volume) * (double) percentagemDesconto / 100;
     }
 
     @Override
@@ -42,6 +44,5 @@ public class FrutaVolume extends Fruta implements Descontavel {
     public float getVolume() {
         return volume;
     }
-
 
 }

@@ -14,8 +14,7 @@ public class FrutaPeso extends Fruta implements Descontavel {
 
     @Override
     public double pagar() {
-        double precoTotal = preco * peso;
-        return precoTotal - precoTotal * (double) percentagemDesconto / 100;
+        return preco * peso - descontar();
     }
 
     @Override
@@ -36,7 +35,7 @@ public class FrutaPeso extends Fruta implements Descontavel {
     }
 
     @Override
-    public void descontar(double percentagem) {
-        setPercentagemDesconto(percentagem);
+    public double descontar() {
+        return (preco * peso) * (double) percentagemDesconto / 100;
     }
 }
