@@ -6,32 +6,30 @@
 
 Considere que se pretende desenvolver uma aplicação para registo de navios num porto marítimo. Um navio é genericamente caracterizado pela seguinte informação:
 
-Identificador do Navio, tipo `String`
+:white_check_mark: Identificador do Navio, tipo `String`
 
-Nome, tipo `String`
+:white_check_mark: Nome, tipo `String`
 
-Ano de construção, tipo `Date`
+:white_check_mark: Ano de construção, tipo `Date`
 
-Comprimento tipo `float`
+:white_check_mark: Comprimento tipo `float`
 
-Um navio porta-contentores é um navio com atributo adicional, o número máximo de contentores (int).
+:white_check_mark: Um navio `PortaContentores` é um navio com atributo adicional, o `númeroMáximoContentores (int)`.
 
-Um navio petroleiro é um navio com atributo adicional, capacidade de carga (float), em toneladas. 
-Codifique as classes Navio, PortaContentores e Petroleiro, que representam respetivamente um navio qualquer, um navio porta-contentores e um navio petroleiro, incluindo construtores, métodos de acesso (getters) e mutação (setters).
+:white_check_mark: Um navio `Petroleiro` é um navio com atributo adicional, `capacidadeCarga (float)`, em toneladas. 
 
-Escreva a função main() para testar a classe ContaBancária. Crie uma conta, efetue
-depósitos e levantamentos e imprima no ecrã a informação da conta sempre que atualiza o
-saldo.
+:white_check_mark: Codifique as classes `Navio`, `PortaContentores` e `Petroleiro`, que representam respetivamente um navio qualquer, um navio porta-contentores e um navio petroleiro, incluindo `construtores`, métodos de acesso `getters` e mutação `setters`.
+
 
 ### Exercício 2
 
-Implemente uma classe Porto (apenas os atributos e construtor) para armazenar a informação sobre a atracagem de navios (use o tipo de coleção que considerar mais apropriado). A classe deve incluir métodos para (nota: pode adicionar métodos às classes anteriores se necessário):
+:white_check_mark: Implemente uma classe `Porto` (apenas os `atributos` e `construtor`) para armazenar a informação sobre a atracagem de navios (use o tipo de coleção que considerar mais apropriado). A classe deve incluir métodos para _(nota: pode adicionar métodos às classes anteriores se necessário)_:
 
-• Adicionar um novo navio sem permitir a duplicação da Identificador do Navio;
+:white_check_mark: • Adicionar um novo navio sem permitir a duplicação da Identificador do Navio;
 
-• Devolver a quantidade máxima total de contentores de todos os navios porta-contentores atracados no porto;
+:white_check_mark: • Devolver a quantidade máxima total de contentores de todos os navios porta-contentores atracados no porto;
 
-• Devolver a capacidade total de carga de todos os navios porta-contentores e petroleiros atracados no porto, sabendo que um contentor tem capacidade para 10 toneladas;
+:white_check_mark: • Devolver a capacidade total de carga de todos os navios porta-contentores e petroleiros atracados no porto, sabendo que um contentor tem capacidade para 10 toneladas;
 
 ### Exercício 3
 
