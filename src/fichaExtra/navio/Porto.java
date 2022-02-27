@@ -2,17 +2,23 @@ package fichaExtra.navio;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Porto {
-    public List<Navio> navios;
+    protected List<Navio> navios;
 
     public Porto() {
         this.navios = new ArrayList<>();
     }
 
     // • Adicionar um novo navio sem permitir a duplicação de Identificador do Navio;
-    // UUID Identificador (não será necessario fazer verificação de Identificador).
-    public void adiconarNavios(Navio navio) {
+    public void adicionarNavio(Navio navio) throws Exception {
+        for (Navio embarcacao : navios) {
+            if (Objects.equals(embarcacao.getId(), navio.getId())) {
+                throw new Exception("Identificadores iguais");
+            }
+        }
+
         navios.add(navio);
     }
 
@@ -45,8 +51,6 @@ public class Porto {
 
     @Override
     public String toString() {
-        return "Porto{" +
-                "navios=" + navios +
-                '}';
+        return "Porto{" + "navios=" + navios + '}';
     }
 }
