@@ -15,9 +15,9 @@ Ano de construção, tipo `Date`
 Comprimento tipo `float`
 
 Um navio porta-contentores é um navio com atributo adicional, o número máximo de contentores (int).
-Um navio petroleiro é um navio com atributo adicional capacidade de carga (float), em toneladas. 
-Codifique as classes Navio, PortaContentores e Petroleiro, que
-representam respetivamente um navio qualquer, um navio porta-contentores e um navio petroleiro, incluindo construtores, métodos de acesso (getters) e mutação (setters).
+
+Um navio petroleiro é um navio com atributo adicional, capacidade de carga (float), em toneladas. 
+Codifique as classes Navio, PortaContentores e Petroleiro, que representam respetivamente um navio qualquer, um navio porta-contentores e um navio petroleiro, incluindo construtores, métodos de acesso (getters) e mutação (setters).
 
 Escreva a função main() para testar a classe ContaBancária. Crie uma conta, efetue
 depósitos e levantamentos e imprima no ecrã a informação da conta sempre que atualiza o
@@ -26,11 +26,12 @@ saldo.
 ### Exercício 2
 
 Implemente uma classe Porto (apenas os atributos e construtor) para armazenar a informação sobre a atracagem de navios (use o tipo de coleção que considerar mais apropriado). A classe deve incluir métodos para (nota: pode adicionar métodos às classes anteriores se necessário):
+
 • Adicionar um novo navio sem permitir a duplicação da Identificador do Navio;
-• Devolver a quantidade máxima total de contentores de todos os navios porta-contentores
-atracados no porto;
-• Devolver a capacidade total de carga de todos os navios porta-contentores e petroleiros
-atracados no porto, sabendo que um contentor tem capacidade para 10 toneladas;
+
+• Devolver a quantidade máxima total de contentores de todos os navios porta-contentores atracados no porto;
+
+• Devolver a capacidade total de carga de todos os navios porta-contentores e petroleiros atracados no porto, sabendo que um contentor tem capacidade para 10 toneladas;
 
 ### Exercício 3
 

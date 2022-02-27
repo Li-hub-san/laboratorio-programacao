@@ -1,37 +1,27 @@
 package fichaExtra.navio;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.UUID;
 
 public abstract class Navio {
-    protected String id;
+    private final String id;
     protected String nome;
-    protected Date anoConstrucao;
+    protected LocalDate anoConstrucao;
     protected float comprimento;
 
-    public Navio(String id, String nome, Date anoConstrucao, float comprimento) {
-        this.id = id;
+    public Navio(String nome, LocalDate anoConstrucao, float comprimento) {
+        this.id = String.valueOf(UUID.randomUUID());
         this.nome = nome;
         this.anoConstrucao = anoConstrucao;
         this.comprimento = comprimento;
     }
 
     @Override
-    public String toString() {
-        return "Navio{" +
-                "id='" + id + '\'' +
-                ", nome='" + nome + '\'' +
-                ", anoConstrucao=" + anoConstrucao +
-                ", comprimento=" + comprimento +
-                '}';
-    }
+    public abstract String toString();
 
     // getters and setters
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getNome() {
@@ -42,19 +32,12 @@ public abstract class Navio {
         this.nome = nome;
     }
 
-    public Date getAnoConstrucao() {
+    public LocalDate getAnoConstrucao() {
         return anoConstrucao;
-    }
-
-    public void setAnoConstrucao(Date anoConstrucao) {
-        this.anoConstrucao = anoConstrucao;
     }
 
     public float getComprimento() {
         return comprimento;
     }
 
-    public void setComprimento(float comprimento) {
-        this.comprimento = comprimento;
-    }
 }
