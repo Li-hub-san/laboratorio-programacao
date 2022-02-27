@@ -29,7 +29,7 @@ Esta classe deverá implementar o seguinte:
 
 :white_check_mark: c) Um método que calcula o valor total da fruta no cesto. 
 
-:white_check_mark: d) Um método (deverá receber como parâmetro uma `String` tipoFruta )que determina o número de frutos de um dado tipo existentes no cesto.
+:white_check_mark: d) Um método (deverá receber como parâmetro uma `String` tipoFruta) que determina o número de frutos de um dado tipo existentes no cesto.
 
 :white_check_mark: e) Um método (que deverá receber como parâmetro uma `String` tipoFruta) que determina o valor total gasto em frutos de um dado tipo.
 

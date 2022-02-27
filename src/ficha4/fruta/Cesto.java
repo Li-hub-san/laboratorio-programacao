@@ -21,12 +21,12 @@ public class Cesto {
         }
     }
 
-    // c) Um método que calcula o valor total da fruta no cesto. (custo?)
+    // c) Um método que calcula o valor total da fruta no cesto. (quantidade)
     public int totalFrutas() {
         return totalItens;
     }
 
-    // c) Um método que calcula o valor total da fruta no cesto. (custo)
+    // c) Um método que calcula o valor total da fruta no cesto. (€)
     public double precoTotalNoCesto() {
         double valorTotal = 0;
         for (Fruta fruta : frutas) {
@@ -35,8 +35,8 @@ public class Cesto {
         return valorTotal;
     }
 
-    // d) 2. Um método que determina o número de frutos de um dado tipo existentes no cesto (através do nome)
-    public double numeroDeFrutasMesmoTipo(String tipoFruta) {
+    // d) 2. Um método que determina a quantidade frutos de um dado tipo existentes no cesto (através do nome)
+    public double quantidadeDeFrutasMesmoTipo(String tipoFruta) {
         double quantidade = 0;
         for (Fruta fruta : frutas) {
             if (Objects.equals(fruta.getClass().getSimpleName(), tipoFruta)) {
@@ -51,6 +51,17 @@ public class Cesto {
                 if (fruta instanceof FrutaPeso) {
                     quantidade += ((FrutaPeso) fruta).getPeso();
                 }
+            }
+        }
+        return quantidade;
+    }
+
+    // d) 2. Um método que determina o número de frutos de um dado tipo existentes no cesto (através do nome)
+    public int numeroDeFrutasMesmoTipoClasse(String tipoFruta) {
+        int quantidade = 0;
+        for (Fruta fruta : frutas) {
+            if (Objects.equals(fruta.getClass().getSimpleName(), tipoFruta)) {
+                quantidade++;
             }
         }
         return quantidade;
@@ -80,7 +91,7 @@ public class Cesto {
         return frutas;
     }
 
-    public int getCAP_MAX() {
+    public int getCapacidadeMaxima() {
         return CAP_MAX;
     }
 
