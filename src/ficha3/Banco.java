@@ -16,9 +16,10 @@ public class Banco {
         this.casas = new ArrayList<>();
     }
 
+    // comparar apenas a morada e não o objecto em si.
     public ContaBancaria getConta(String titular) {
         for (ContaBancaria conta : contas) {
-            if (Objects.equals(conta.getTitular(), titular)) {
+            if (conta.getTitular().equals(titular)) {
                 return conta;
             }
         }
@@ -58,7 +59,7 @@ public class Banco {
 
         for (int i = 0; i < casas.size(); i++) {
             Casa casa = casas.get(i);
-            if (Objects.equals(casa.getMorada(), morada)) {
+            if (casa.getMorada().equals(morada)) {
                 casas.remove(casa);
                 // apenas se tiver a certeza que as casas têm moradas únicas.
                 return;

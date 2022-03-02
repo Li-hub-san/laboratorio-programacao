@@ -1,6 +1,7 @@
 package fichaExtra.navio;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,7 @@ public class Porto {
     // • Adicionar um novo navio sem permitir a duplicação de Identificador do Navio;
     public void adicionarNavio(Navio navio) throws Exception {
         for (Navio embarcacao : navios) {
-            if (Objects.equals(embarcacao.getId(), navio.getId())) {
+            if (embarcacao.getId().equals(navio.getId())) {
                 throw new Exception("Identificadores iguais");
             }
         }
