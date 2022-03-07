@@ -1,13 +1,22 @@
 package projeto1;
 
-import projeto1.user.Programador;
-
-import java.util.List;
-
 public class Avaliacao {
-    private List<Aplicacao> aplicacoes;
-    private List<Programador> programadores;
+    private float classificacao;
+    private String comentario;
 
+    // dois construtores porque o comentario é optional
+    public Avaliacao(float classificacao, String comentario) {
+        this.classificacao = classificacao;
+        this.comentario = comentario;
+    }
 
+    public Avaliacao(float classificacao) {
+        this.classificacao = classificacao;
+    }
+
+    // getters and setter
+    public float getClassificacao() {
+        return classificacao;
+    }
 
 }

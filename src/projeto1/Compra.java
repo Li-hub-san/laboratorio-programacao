@@ -7,21 +7,31 @@ import java.util.List;
 
 public class Compra {
     private Date date;
-    private double valor;
+    private double preco;
+    private List<Aplicacao> aplicacoes;
+    private Cliente cliente;
 
-    public Compra(double valor) {
-        this.valor = valor;
+    public Compra(Cliente cliente, List<Aplicacao> aplicacoes) {
+        this.cliente = cliente;
+        this.aplicacoes = aplicacoes;
         this.date = new Date();
+        this.preco = aplicacoes.stream().mapToDouble(Aplicacao::getPreco).sum();
+        aplicacoes.forEach(Aplicacao::adicionarVenda);
     }
 
 
     // getters and setters
-    public double getValor() {
-        return valor;
+    public double getPreco() {
+        return preco;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
+
+    public List<Aplicacao> getAplicacoes() {
+        return aplicacoes;
+    }
+
 
 }

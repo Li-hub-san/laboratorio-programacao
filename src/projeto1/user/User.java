@@ -2,16 +2,15 @@ package projeto1.user;
 
 public abstract class User {
     protected int id;
-    protected static int num = 1;
+    protected static int num = 0;
     protected String nome;
     protected int idade;
 
     public User(String nome, int idade) {
-        id = num;
         num++;
+        id = num;
         this.nome = nome;
         this.idade = idade;
-
     }
 
     // getters and setters
