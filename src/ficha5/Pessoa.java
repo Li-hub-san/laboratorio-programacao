@@ -1,3 +1,5 @@
+package ficha5;
+
 import java.util.UUID;
 
 public class Pessoa {
@@ -7,7 +9,7 @@ public class Pessoa {
     private double saldo;
     private final UUID id;
 
-    public Pessoa(String firstName, String lastName) {
+    public Pessoa(String firstName, String lastName, int idade, double saldo) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = UUID.randomUUID();
