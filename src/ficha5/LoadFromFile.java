@@ -14,6 +14,8 @@ public class LoadFromFile {
     public LoadFromFile() {
     }
 
+    // código para ler a partir dos resources encontrado aqui: https://kodejava.org/how-do-i-read-json-file-using-json-java-org-json-library/
+    // código para fazer parsing dos objectos encontrado aqui: https://stackoverflow.com/a/10926379
     public List<Pessoa> obterInformacaoFicheiro(String ficheiro) {
         // para ir buscar a partir dos resources, os ficheiros têm que estar no caminho /src/main/resources
         // pasta "ficha5" adicionada para poder diferenciar para que projectos os resources são
