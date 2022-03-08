@@ -94,13 +94,13 @@ public class AppStore {
         return valorCompras;
     }
 
-
     @Override
     public String toString() {
-        return "AppStore{" +
-                "aplicacoes=" + aplicacoes +
-                ", users=" + users +
-                '}';
+        StringBuilder output = new StringBuilder("AppStore{\n  aplicações=[");
+        for (Aplicacao aplicacao : aplicacoes) {
+            output.append("\n    ").append(aplicacao);
+        }
+        return output + "\n  ]\n}";
     }
 
     public List<Aplicacao> getAplicacoes() {
@@ -110,6 +110,5 @@ public class AppStore {
     public List<User> getUsers() {
         return users;
     }
-
 
 }

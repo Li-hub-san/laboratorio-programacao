@@ -19,4 +19,8 @@ public class Avaliacao {
         return classificacao;
     }
 
+    public String getComentario() {
+        return comentario;
+    }
+
 }
