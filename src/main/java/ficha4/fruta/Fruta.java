@@ -4,7 +4,7 @@ public abstract class Fruta {
     private final TipoFruta tipo;
     protected String nome;
     protected double preco;
-    
+
     public Fruta(TipoFruta tipo, String nome, double preco) {
         this.tipo = tipo;
         this.nome = nome;

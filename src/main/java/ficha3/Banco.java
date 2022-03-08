@@ -3,7 +3,6 @@ package ficha3;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Banco {
     private String nome;
@@ -29,7 +28,7 @@ public class Banco {
         return null;
     }
 
-    public void criaConta(ContaBancaria conta){
+    public void criaConta(ContaBancaria conta) {
         contas.add(conta);
     }
 

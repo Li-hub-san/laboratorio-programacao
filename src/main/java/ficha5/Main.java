@@ -31,7 +31,7 @@ public class Main {
 //        System.out.println("\nSaldo acumulado: " + mercado.acumularSaldo());
 
         LoadFromFile file = new LoadFromFile();
-        file.obterInformacaoFicheiro("pessoas.json");
+        System.out.println(file.obterInformacaoFicheiro("pessoas.json"));
 
     }
 

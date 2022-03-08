@@ -18,7 +18,7 @@ public class LoadFromFile {
     // código para fazer parsing dos objectos encontrado aqui: https://stackoverflow.com/a/10926379
     public List<Pessoa> obterInformacaoFicheiro(String ficheiro) {
         // para ir buscar a partir dos resources, os ficheiros têm que estar no caminho /src/main/resources
-        // pasta "ficha5" adicionada para poder diferenciar para que projectos os resources são
+        // pasta "main.java.ficha5" adicionada para poder diferenciar para que projectos os resources são
         String resourceName = "/ficha5/" + ficheiro;
 
         // ler ficheiro a partir dos resources
