@@ -61,7 +61,7 @@ public class Aplicacao {
     public String toString() {
         return "Aplicacao{" +
                 "tipo=" + tipo +
-                ", nome='" + nome + '\'' +
+                ", nome='" + nome +
                 ", preco=" + preco +
                 ", classificacao=" + avaliacao +
                 '}';

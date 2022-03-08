@@ -26,6 +26,13 @@ public class AppStore {
         aplicacao.getProgramador().adicionarAplicacao(aplicacao);
     }
 
+    // instancia uma nova compra e adiciona a compra à lista de compras da classe Cliente.
+
+    /**
+     * Instancia uma nova compra e adiciona-a à lista de compras do Cliente
+     * @param cliente Cliente
+     * @param aplicacoes Aplicações
+     */
     public void comprarAplicacoes(Cliente cliente, List<Aplicacao> aplicacoes) {
         Compra compra = new Compra(cliente, aplicacoes);
         cliente.adicionarCompra(compra);
@@ -53,13 +60,13 @@ public class AppStore {
 
     public List<Aplicacao> listarPorNumeroVendas() {
         // reordena a lista. Necessário devolver a lista.
-        aplicacoes.sort(Comparator.comparing(Aplicacao::getNumeroVendas));
+        aplicacoes.sort(Comparator.comparing(Aplicacao::getNumeroVendas).reversed());
         return aplicacoes;
     }
 
     public List<Aplicacao> listarPorClassificacao() {
         // reordena a lista. Necessário devolver a lista.
-        aplicacoes.sort(Comparator.comparing(Aplicacao::getAvaliacao));
+        aplicacoes.sort(Comparator.comparing(Aplicacao::getAvaliacao).reversed());
         return aplicacoes;
     }
 

@@ -19,6 +19,15 @@ public class Compra {
         aplicacoes.forEach(Aplicacao::adicionarVenda);
     }
 
+    @Override
+    public String toString() {
+        return "Compra{" +
+                "date=" + date +
+                ", preco=" + preco +
+                ", aplicacoes=" + aplicacoes +
+                ", cliente=" + cliente +
+                '}';
+    }
 
     // getters and setters
     public double getPreco() {
@@ -32,6 +41,5 @@ public class Compra {
     public List<Aplicacao> getAplicacoes() {
         return aplicacoes;
     }
-
 
 }

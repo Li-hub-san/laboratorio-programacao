@@ -10,6 +10,14 @@ public class Avaliacao {
         this.comentario = comentario;
     }
 
+    @Override
+    public String toString() {
+        return "Avaliacao{" +
+                "classificacao=" + classificacao +
+                ", comentario='" + comentario + '\'' +
+                '}';
+    }
+
     public Avaliacao(float classificacao) {
         this.classificacao = classificacao;
     }

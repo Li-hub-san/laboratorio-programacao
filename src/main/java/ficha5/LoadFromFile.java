@@ -53,7 +53,7 @@ public class LoadFromFile {
                 // adicionar nova pessoa a lista para poder devolver tudo de uma vez
                 pessoas.add(pessoa);
             } catch (JSONException e) {
-                // apanhar possiveis erros quando estiver a fazer parse dos objectos ou propriedades
+                // apanhar possiveis erros quando estiver a fazer parse dos objetos ou propriedades
                 System.out.println("Erro de parse: " + e.getMessage());
             }
         }
