@@ -1,11 +1,32 @@
 package projeto1.menu;
 
-public class Menu {
+import projeto1.auxiliares.AuxiliarExcecao;
+import projeto1.auxiliares.AuxiliarMenu;
 
-    public void initialMenu() {
-        System.out.println("\nBenvido à AppStore");
+import java.util.InputMismatchException;
 
-        System.out.println("Obrigada pela visita. Esperamos vê-lo novamente");
+public abstract class Menu {
+
+    private boolean continuarNoCiclo = true;
+
+    public void mostrar() {
+        while (continuarNoCiclo) {
+            imprimirOpcoes();
+
+            try {
+                int opcao = AuxiliarMenu.pedirOpcao();
+                tratarOpcao(opcao);
+            } catch (InputMismatchException excecao) {
+                AuxiliarExcecao.tratarExcecaoInput();
+            }
+        }
     }
+
+    protected void sair() {
+        continuarNoCiclo = false;
+    }
+
+    protected abstract void imprimirOpcoes();
+    protected abstract void tratarOpcao(int opcao);
 
 }

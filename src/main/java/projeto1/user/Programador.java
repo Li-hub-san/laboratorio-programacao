@@ -1,19 +1,20 @@
 package projeto1.user;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 import org.json.JSONPropertyIgnore;
 import projeto1.Aplicacao;
 import projeto1.TipoAplicacao;
 
-public class Programador extends User {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public class Programador extends Utilizador {
 
     private double avaliacaoMedia;
     private final List<Aplicacao> aplicacoesDesenvolvidas;
 
-    public Programador(String nome, int idade) {
-        super(nome, idade);
+    public Programador(String nomeUtilizador, String palavraPasse, String nome, int idade) {
+        super(nomeUtilizador, palavraPasse, nome, idade);
         this.aplicacoesDesenvolvidas = new ArrayList<>();
     }
 
@@ -25,10 +26,10 @@ public class Programador extends User {
 
     public void recalcularAvaliacao() {
         List<Double> classificacoes = aplicacoesDesenvolvidas.stream()
-            .filter(Aplicacao::isPublicada)
-            .map(Aplicacao::getAvaliacaoMedia)
-            .filter(Objects::nonNull) // descartado o que vem a null : sem avaliacao != avaliacao a 0
-            .toList();
+                .filter(Aplicacao::isPublicada)
+                .map(Aplicacao::getAvaliacaoMedia)
+                .filter(Objects::nonNull) // descartado o que vem a null : sem avaliacao != avaliacao a 0
+                .toList();
 
         double sum = 0;
 

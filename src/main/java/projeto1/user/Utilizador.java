@@ -2,17 +2,22 @@ package projeto1.user;
 
 import org.json.JSONObject;
 
-public abstract class User {
+public abstract class Utilizador {
 
     protected static int idContador = 0;
 
     protected int id;
+
+    protected String nomeUtilizador;
+    protected String palavraPasse;
     protected String nome;
     protected int idade;
 
-    public User(String nome, int idade) {
+    public Utilizador(String nomeUtilizador, String palavraPasse, String nome, int idade) {
         idContador++;
         id = idContador;
+        this.nomeUtilizador = nomeUtilizador;
+        this.palavraPasse = palavraPasse;
         this.nome = nome;
         this.idade = idade;
     }
@@ -24,6 +29,10 @@ public abstract class User {
 
     public String getNome() {
         return nome;
+    }
+
+    public String getNomeUtilizador() {
+        return nomeUtilizador;
     }
 
     @Override

@@ -1,13 +1,13 @@
 package projeto1;
 
-import projeto1.menu.Menu;
+import projeto1.menu.MenuAutenticacao;
 import projeto1.user.Cliente;
 
 public class Main {
 
     public static void main(String[] args) {
-        Menu menu = new Menu();
-        menu.initialMenu();
+        MenuAutenticacao menu = new MenuAutenticacao();
+        menu.mostrar();
 
         //        imprimirTituloExercicio("Registar novos utilizadores e atribuir automaticamente números únicos");
         //
@@ -166,10 +166,10 @@ public class Main {
 
     private static void imprimirAplicacoesCompradas(AppStore appStore, Cliente cliente) {
         System.out.printf(
-            "ID: %s, nome: %s\n -> Aplicaçoes compradas:\n%s\n\n",
-            cliente.getId(),
-            cliente.getNome(),
-            appStore.getAplicacoesCompradas(cliente)
+                "ID: %s, nome: %s\n -> Aplicaçoes compradas:\n%s\n\n",
+                cliente.getId(),
+                cliente.getNome(),
+                appStore.getAplicacoesCompradas(cliente)
         );
     }
 

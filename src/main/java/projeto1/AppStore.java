@@ -9,22 +9,22 @@ import org.json.JSONObject;
 import org.json.JSONPropertyIgnore;
 import projeto1.user.Cliente;
 import projeto1.user.Programador;
-import projeto1.user.User;
+import projeto1.user.Utilizador;
 
 public class AppStore {
 
     private final List<Aplicacao> aplicacoes;
-    private final List<User> users;
+    private final List<Utilizador> utilizadores;
     private final HashMap<Integer, List<Compra>> mapaCompras;
 
     public AppStore() {
         aplicacoes = new ArrayList<>();
-        users = new ArrayList<>();
+        utilizadores = new ArrayList<>();
         mapaCompras = new HashMap<>();
     }
 
-    public void registarUser(User user) {
-        users.add(user);
+    public void registarUser(Utilizador utilizador) {
+        utilizadores.add(utilizador);
     }
 
     public void publicarAplicacao(Aplicacao aplicacao) {
@@ -92,17 +92,17 @@ public class AppStore {
         return aplicacoes;
     }
 
-    public List<Aplicacao> listarAplicacoes(User user) {
-        if (user instanceof Cliente) {
-            return mapaCompras.get(user.getId()).stream()
+    public List<Aplicacao> listarAplicacoes(Utilizador utilizador) {
+        if (utilizador instanceof Cliente) {
+            return mapaCompras.get(utilizador.getId()).stream()
                 .map(Compra::getAplicacoes)
                 .flatMap(Collection::stream)
                 .toList();
         }
 
-        if (user instanceof Programador) {
+        if (utilizador instanceof Programador) {
             return aplicacoes.stream()
-                .filter(aplicacao -> aplicacao.getProgramador().getId() == user.getId())
+                .filter(aplicacao -> aplicacao.getProgramador().getId() == utilizador.getId())
                 .toList();
         }
 
@@ -111,9 +111,9 @@ public class AppStore {
 
     @JSONPropertyIgnore
     public double getValorTotalCompras() {
-        List<Cliente> clientes = users.stream()
-            .filter(user -> user instanceof Cliente)
-            .map(user -> (Cliente) user)
+        List<Cliente> clientes = utilizadores.stream()
+            .filter(utilizador -> utilizador instanceof Cliente)
+            .map(utilizador -> (Cliente) utilizador)
             .toList();
 
         List<Compra> compras = new ArrayList<>();
@@ -141,8 +141,8 @@ public class AppStore {
     }
 
     @JSONPropertyIgnore // esta anotação ignora este getter quando imprime o toString() deste objeto
-    public List<User> getUsers() {
-        return users;
+    public List<Utilizador> getUsers() {
+        return utilizadores;
     }
 
 }
