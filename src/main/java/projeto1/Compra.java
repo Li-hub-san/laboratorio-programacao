@@ -1,45 +1,52 @@
 package projeto1;
 
-import projeto1.user.Cliente;
-
 import java.util.Date;
 import java.util.List;
+import org.json.JSONObject;
+import projeto1.user.Cliente;
 
 public class Compra {
-    private Date date;
-    private double preco;
-    private List<Aplicacao> aplicacoes;
-    private Cliente cliente;
+
+    private final Cliente cliente;
+    private final List<Aplicacao> aplicacoes;
+    private final Date date;
+    private final double preco;
 
     public Compra(Cliente cliente, List<Aplicacao> aplicacoes) {
         this.cliente = cliente;
         this.aplicacoes = aplicacoes;
         this.date = new Date();
-        this.preco = aplicacoes.stream().mapToDouble(Aplicacao::getPreco).sum();
+
+        // calcular preco a partir das aplicações compradas
+        this.preco = aplicacoes.stream()
+            .mapToDouble(Aplicacao::getPreco)
+            .sum();
+
+        // adicionar uma venda a cada uma das aplicações
         aplicacoes.forEach(Aplicacao::adicionarVenda);
     }
 
     @Override
     public String toString() {
-        return "Compra{" +
-                "date=" + date +
-                ", preco=" + preco +
-                ", aplicacoes=" + aplicacoes +
-                ", cliente=" + cliente +
-                '}';
+        return new JSONObject(this).toString(2);
     }
 
     // getters and setters
-    public double getPreco() {
-        return preco;
-    }
 
-    public void setPreco(double preco) {
-        this.preco = preco;
+    public Cliente getCliente() {
+        return cliente;
     }
 
     public List<Aplicacao> getAplicacoes() {
         return aplicacoes;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public double getPreco() {
+        return preco;
     }
 
 }

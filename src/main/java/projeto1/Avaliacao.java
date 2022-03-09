@@ -1,29 +1,30 @@
 package projeto1;
 
+import org.json.JSONObject;
+
 public class Avaliacao {
-    private float classificacao;
-    private String comentario;
+
+    private final double classificacao;
+    private final String comentario;
 
     // dois construtores porque o comentario é optional
-    public Avaliacao(float classificacao, String comentario) {
+    public Avaliacao(double classificacao, String comentario) {
         this.classificacao = classificacao;
         this.comentario = comentario;
     }
 
-    @Override
-    public String toString() {
-        return "Avaliacao{" +
-                "classificacao=" + classificacao +
-                ", comentario='" + comentario + '\'' +
-                '}';
+    public Avaliacao(double classificacao) {
+        this.classificacao = classificacao;
+        this.comentario = null;
     }
 
-    public Avaliacao(float classificacao) {
-        this.classificacao = classificacao;
+    @Override
+    public String toString() {
+        return new JSONObject(this).toString(2);
     }
 
     // getters and setter
-    public float getClassificacao() {
+    public double getClassificacao() {
         return classificacao;
     }
 

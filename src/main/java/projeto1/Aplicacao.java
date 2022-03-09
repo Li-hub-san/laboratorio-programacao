@@ -1,20 +1,23 @@
 package projeto1;
 
-import projeto1.user.Programador;
-
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
+import org.json.JSONObject;
+import org.json.JSONPropertyIgnore;
+import projeto1.user.Programador;
 
 public class Aplicacao {
 
-    private TipoAplicacao tipo;
+    private final TipoAplicacao tipo;
     private String nome;
     private double preco;
-    private Float avaliacao;
-    private Programador programador;
-    private HashMap<Integer, Avaliacao> mapaAvaliacoes;
+    private final Programador programador;
+
     private int numeroVendas;
+    private boolean publicada;
+
+    private final HashMap<Integer, Avaliacao> mapaAvaliacoes;
+    private Double avaliacaoMedia;
 
     public Aplicacao(TipoAplicacao tipo, String nome, double preco, Programador programador) {
         this.tipo = tipo;
@@ -25,28 +28,24 @@ public class Aplicacao {
         this.numeroVendas = 0;
     }
 
-    public void avaliar(int userId, float classificacao) {
+    public void avaliar(int userId, double classificacao) {
         mapaAvaliacoes.put(userId, new Avaliacao(classificacao));
         recalcularAvaliacao();
         programador.recalcularAvaliacao();
     }
 
-    public void avaliar(int userId, float classificacao, String comentario) {
+    public void avaliar(int userId, double classificacao, String comentario) {
         mapaAvaliacoes.put(userId, new Avaliacao(classificacao, comentario));
         recalcularAvaliacao();
         programador.recalcularAvaliacao();
     }
 
     private void recalcularAvaliacao() {
-        Collection<Avaliacao> values = mapaAvaliacoes.values();
-
-        float sum = 0;
-
-        for (Avaliacao avaliacao : values) {
-            sum += avaliacao.getClassificacao();
-        }
-
-        avaliacao = sum / mapaAvaliacoes.keySet().size();
+        this.avaliacaoMedia = mapaAvaliacoes.values()
+            .stream()
+            .mapToDouble(Avaliacao::getClassificacao)
+            .average()
+            .orElse(0);
     }
 
     public void adicionarVenda() {
@@ -59,12 +58,7 @@ public class Aplicacao {
 
     @Override
     public String toString() {
-        return "Aplicacao{" +
-                "tipo=" + tipo +
-                ", nome='" + nome +
-                ", preco=" + preco +
-                ", classificacao=" + avaliacao +
-                '}';
+        return new JSONObject(this).toString(2);
     }
 
     // getters and setters
@@ -84,18 +78,30 @@ public class Aplicacao {
         this.preco = preco;
     }
 
-    public Float getAvaliacao() {
-        return avaliacao;
+    public Double getAvaliacaoMedia() {
+        return avaliacaoMedia;
     }
 
+    public void setPublicada(boolean publicada) {
+        this.publicada = publicada;
+    }
+
+    @JSONPropertyIgnore
+    public boolean isPublicada() {
+        return publicada;
+    }
+
+    @JSONPropertyIgnore
     public TipoAplicacao getTipo() {
         return tipo;
     }
 
+    @JSONPropertyIgnore
     public int getNumeroVendas() {
         return numeroVendas;
     }
 
+    @JSONPropertyIgnore
     public Programador getProgramador() {
         return programador;
     }

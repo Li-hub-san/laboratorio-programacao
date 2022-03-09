@@ -1,62 +1,66 @@
 package projeto1.user;
 
-import projeto1.Aplicacao;
-import projeto1.TipoAplicacao;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import org.json.JSONPropertyIgnore;
+import projeto1.Aplicacao;
+import projeto1.TipoAplicacao;
 
 public class Programador extends User {
-    private float avaliacao;
 
-    // cuidado ao apagar uma aplicacao desta lista tem que ser apagada também da lista de aplicacoes da SppStore
-    private List<Aplicacao> aplicacoes;
+    private double avaliacaoMedia;
+    private final List<Aplicacao> aplicacoesDesenvolvidas;
 
     public Programador(String nome, int idade) {
         super(nome, idade);
-        this.aplicacoes = new ArrayList<>();
+        this.aplicacoesDesenvolvidas = new ArrayList<>();
     }
 
     public Aplicacao desenvolverAplicacao(TipoAplicacao tipo, String nome, double preco) {
-        return new Aplicacao(tipo, nome, preco, this);
-    }
-
-    public void adicionarAplicacao(Aplicacao aplicacao) {
-        aplicacoes.add(aplicacao);
+        Aplicacao aplicacao = new Aplicacao(tipo, nome, preco, this);
+        aplicacoesDesenvolvidas.add(aplicacao);
+        return aplicacao;
     }
 
     public void recalcularAvaliacao() {
-        List<Float> values = aplicacoes.stream()
-                .map(Aplicacao::getAvaliacao)
-                .filter(Objects::nonNull) // descartado o que vem a null : sem avaliacao != avaliacao a 0
-                .toList();
+        List<Double> classificacoes = aplicacoesDesenvolvidas.stream()
+            .filter(Aplicacao::isPublicada)
+            .map(Aplicacao::getAvaliacaoMedia)
+            .filter(Objects::nonNull) // descartado o que vem a null : sem avaliacao != avaliacao a 0
+            .toList();
 
-        float sum = 0;
+        double sum = 0;
 
-        for (Float value : values) {
-            sum += value;
+        for (Double classificacao : classificacoes) {
+            sum += classificacao;
         }
 
-        avaliacao = sum / values.size();
+        avaliacaoMedia = sum / classificacoes.size();
     }
 
     public double valorTotalRecebido() {
         double valorTotal = 0;
-        for (Aplicacao aplicacao : aplicacoes) {
+
+        for (Aplicacao aplicacao : aplicacoesDesenvolvidas) {
             int numeroVendas = aplicacao.getNumeroVendas();
             double preco = aplicacao.getPreco();
             valorTotal += numeroVendas * preco;
         }
+
         return valorTotal;
     }
 
     // getters and setters
-    public float getAvaliacao() {
-        return avaliacao;
+
+    @JSONPropertyIgnore
+    public double getAvaliacaoMedia() {
+        return avaliacaoMedia;
     }
 
+    @JSONPropertyIgnore
     public List<Aplicacao> getAplicacoesDesenvolvidas() {
-        return aplicacoes;
+        return aplicacoesDesenvolvidas;
     }
+
 }

@@ -1,14 +1,18 @@
 package projeto1.user;
 
+import org.json.JSONObject;
+
 public abstract class User {
+
+    protected static int idContador = 0;
+
     protected int id;
-    protected static int num = 0;
     protected String nome;
     protected int idade;
 
     public User(String nome, int idade) {
-        num++;
-        id = num;
+        idContador++;
+        id = idContador;
         this.nome = nome;
         this.idade = idade;
     }
@@ -22,24 +26,8 @@ public abstract class User {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
     @Override
     public String toString() {
-        return getClass().getSimpleName() + " {" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", idade=" + idade +
-                '}';
+        return new JSONObject(this).toString(2);
     }
 }
