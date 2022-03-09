@@ -6,8 +6,9 @@ import projeto1.user.Cliente;
 public class Main {
 
     public static void main(String[] args) {
-        MenuAutenticacao menu = new MenuAutenticacao();
-        menu.mostrar();
+        MenuAutenticacao autenticacao = new MenuAutenticacao();
+        autenticacao.mostrar();
+
 
         //        imprimirTituloExercicio("Registar novos utilizadores e atribuir automaticamente números únicos");
         //

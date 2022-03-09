@@ -1,15 +1,13 @@
 package projeto1;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
 import org.json.JSONObject;
 import org.json.JSONPropertyIgnore;
+import projeto1.auxiliares.AuxiliarMenu;
 import projeto1.user.Cliente;
 import projeto1.user.Programador;
 import projeto1.user.Utilizador;
+
+import java.util.*;
 
 public class AppStore {
 
@@ -37,7 +35,7 @@ public class AppStore {
     /**
      * Instancia uma nova compra e adiciona-a à lista de compras do Cliente
      *
-     * @param cliente Cliente
+     * @param cliente    Cliente
      * @param aplicacoes Aplicações
      */
     public void comprarAplicacoes(Cliente cliente, List<Aplicacao> aplicacoes) {
@@ -53,25 +51,43 @@ public class AppStore {
     }
 
     public List<Aplicacao> getAplicacoesCompradas(Cliente cliente) {
+        if (!mapaCompras.containsKey(cliente.getId())) {
+            return new ArrayList<>();
+        }
+
         return mapaCompras.get(cliente.getId())
-            .stream()
-            .map(Compra::getAplicacoes)
-            .flatMap(Collection::stream)
-            .toList();
+                .stream()
+                .map(Compra::getAplicacoes)
+                .flatMap(Collection::stream)
+                .toList();
+    }
+
+    public void avaliar(Cliente cliente, Aplicacao aplicacao, double classificacao) {
+        avaliar(cliente, aplicacao, classificacao, null);
+    }
+
+    public void avaliar(Cliente cliente, Aplicacao aplicacao, double classificacao, String comentario) {
+        if (!getAplicacoesCompradas(cliente).contains(aplicacao)) {
+            AuxiliarMenu.imprimirRespostaOpcao("Só pode avaliar se possuir esta aplicação");
+            return;
+        }
+
+        Avaliacao avaliacao = new Avaliacao(classificacao, comentario);
+        aplicacao.adicionarAvaliação(cliente, avaliacao);
     }
 
     public List<Aplicacao> getAplicacoesPorCategoria(TipoAplicacao tipo) {
         return aplicacoes.stream()
-            .filter(aplicacao -> aplicacao.getTipo() == tipo)
-            .toList();
+                .filter(aplicacao -> aplicacao.getTipo() == tipo)
+                .toList();
     }
 
     // não consigo ter uma igualdade de classificação (tendo em conta que é double)
     // entao vou buscar todas as apps que são de classificação igual ou superior.
     public List<Aplicacao> getAplicacoesPorClassificacao(double classificacaoMinima) {
         return aplicacoes.stream()
-            .filter(aplicacao -> aplicacao.getAvaliacaoMedia() >= classificacaoMinima)
-            .toList();
+                .filter(aplicacao -> aplicacao.getAvaliacaoMedia() >= classificacaoMinima)
+                .toList();
     }
 
     public List<Aplicacao> listarPorNome() {
@@ -94,16 +110,20 @@ public class AppStore {
 
     public List<Aplicacao> listarAplicacoes(Utilizador utilizador) {
         if (utilizador instanceof Cliente) {
+            if (!mapaCompras.containsKey(utilizador.getId())) {
+                return new ArrayList<>();
+            }
+
             return mapaCompras.get(utilizador.getId()).stream()
-                .map(Compra::getAplicacoes)
-                .flatMap(Collection::stream)
-                .toList();
+                    .map(Compra::getAplicacoes)
+                    .flatMap(Collection::stream)
+                    .toList();
         }
 
         if (utilizador instanceof Programador) {
             return aplicacoes.stream()
-                .filter(aplicacao -> aplicacao.getProgramador().getId() == utilizador.getId())
-                .toList();
+                    .filter(aplicacao -> aplicacao.getProgramador().getId() == utilizador.getId())
+                    .toList();
         }
 
         return null;
@@ -112,13 +132,15 @@ public class AppStore {
     @JSONPropertyIgnore
     public double getValorTotalCompras() {
         List<Cliente> clientes = utilizadores.stream()
-            .filter(utilizador -> utilizador instanceof Cliente)
-            .map(utilizador -> (Cliente) utilizador)
-            .toList();
+                .filter(utilizador -> utilizador instanceof Cliente)
+                .map(utilizador -> (Cliente) utilizador)
+                .toList();
 
         List<Compra> compras = new ArrayList<>();
         for (Cliente cliente : clientes) {
-            compras.addAll(mapaCompras.get(cliente.getId()));
+            if (mapaCompras.containsKey(cliente.getId())) {
+                compras.addAll(mapaCompras.get(cliente.getId()));
+            }
         }
 
         double valorCompras = 0;

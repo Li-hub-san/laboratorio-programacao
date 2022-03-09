@@ -13,11 +13,6 @@ public class Avaliacao {
         this.comentario = comentario;
     }
 
-    public Avaliacao(double classificacao) {
-        this.classificacao = classificacao;
-        this.comentario = null;
-    }
-
     @Override
     public String toString() {
         return new JSONObject(this).toString(2);

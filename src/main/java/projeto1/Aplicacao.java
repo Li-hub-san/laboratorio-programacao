@@ -1,10 +1,12 @@
 package projeto1;
 
-import java.util.HashMap;
-import java.util.List;
 import org.json.JSONObject;
 import org.json.JSONPropertyIgnore;
 import projeto1.user.Programador;
+import projeto1.user.Utilizador;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class Aplicacao {
 
@@ -28,24 +30,18 @@ public class Aplicacao {
         this.numeroVendas = 0;
     }
 
-    public void avaliar(int userId, double classificacao) {
-        mapaAvaliacoes.put(userId, new Avaliacao(classificacao));
-        recalcularAvaliacao();
-        programador.recalcularAvaliacao();
-    }
-
-    public void avaliar(int userId, double classificacao, String comentario) {
-        mapaAvaliacoes.put(userId, new Avaliacao(classificacao, comentario));
+    public void adicionarAvaliação(Utilizador utilizador, Avaliacao avaliacao) {
+        mapaAvaliacoes.put(utilizador.getId(), avaliacao);
         recalcularAvaliacao();
         programador.recalcularAvaliacao();
     }
 
     private void recalcularAvaliacao() {
         this.avaliacaoMedia = mapaAvaliacoes.values()
-            .stream()
-            .mapToDouble(Avaliacao::getClassificacao)
-            .average()
-            .orElse(0);
+                .stream()
+                .mapToDouble(Avaliacao::getClassificacao)
+                .average()
+                .orElse(0);
     }
 
     public void adicionarVenda() {
