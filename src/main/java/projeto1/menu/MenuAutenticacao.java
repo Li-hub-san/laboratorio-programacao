@@ -95,6 +95,27 @@ public class MenuAutenticacao extends Menu {
     }
 
     private void iniciarSessao() {
+        Scanner scanner = new Scanner(System.in);
+        AuxiliarMenu.imprimirLimiteSuperior("Iniciar menu", ".");
+        System.out.print("Nome de utilizador: ");
+        String nomeUtilizador = scanner.nextLine();
 
+        System.out.print("Palavra passe: ");
+        String palavraPasse = scanner.nextLine();
+
+        Utilizador utilizadorEncontrado = utilizadores.stream()
+                .filter(utilizador -> utilizador.getNomeUtilizador().equals(nomeUtilizador))
+                .findFirst()
+                .orElse(null);
+
+        if (utilizadorEncontrado != null && utilizadorEncontrado.getPalavraPasse().equals(palavraPasse)) {
+            AuxiliarMenu.imprimirRespostaOpcao("Sessão iniciada com sucesso");
+            AuxiliarMenu.imprimirLimiteInferior(".");
+            MenuAppStore menuLoja = new MenuAppStore(utilizadorEncontrado);
+            menuLoja.mostrar();
+            return;
+        }
+        AuxiliarMenu.imprimirRespostaOpcao("Nome de utilizador ou palavra-passe errado(s).");
+        AuxiliarMenu.imprimirLimiteInferior(".");
     }
 }

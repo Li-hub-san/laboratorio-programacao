@@ -3,9 +3,12 @@ package projeto1;
 import projeto1.menu.MenuAutenticacao;
 import projeto1.user.Cliente;
 
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException, IOException {
+
         MenuAutenticacao autenticacao = new MenuAutenticacao();
         autenticacao.mostrar();
 

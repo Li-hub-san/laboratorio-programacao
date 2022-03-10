@@ -21,7 +21,7 @@ public class MenuAppStore extends Menu {
 
     @Override
     protected void imprimirOpcoes() {
-        AuxiliarMenu.imprimirLimiteSuperior("menu de autenticação");
+        AuxiliarMenu.imprimirLimiteSuperior("App Store");
         System.out.println("1 - Listar Aplicações");
         System.out.println("2 - Listar aplicações por ordem alfabética");
         System.out.println("3 - Listar aplicações por classificação");

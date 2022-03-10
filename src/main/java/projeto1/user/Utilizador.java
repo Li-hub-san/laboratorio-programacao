@@ -1,9 +1,10 @@
 package projeto1.user;
 
 import org.json.JSONObject;
+import projeto1.menu.MenuAutenticacao;
 
 public abstract class Utilizador {
-
+    private MenuAutenticacao autenticacao;
     protected static int idContador = 0;
 
     protected int id;
@@ -35,6 +36,10 @@ public abstract class Utilizador {
         return nomeUtilizador;
     }
 
+    public String getPalavraPasse() {
+        return palavraPasse;
+    }
+    
     @Override
     public String toString() {
         return new JSONObject(this).toString(2);
