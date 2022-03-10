@@ -9,7 +9,7 @@ O enunciado do projecto encontra-se abaixo, sub-dividido pelas diferentes funcio
 
 ### Exercício 1: 
 
-**Crie um novo projeto e codifique a classe [`ContaBancária`](/src/ficha3/ContaBancaria.java) com os seguintes atributos e métodos:**
+**Crie um novo projeto e codifique a classe [`ContaBancária`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha3/ContaBancaria.java) com os seguintes atributos e métodos:**
 
 :white_check_mark: a) Uma variável de instância de acesso privado, `titular`, com tipo `String`.
 
