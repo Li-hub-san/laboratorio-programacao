@@ -2,7 +2,7 @@
 
 ## [Ficha 2](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/main/java/ficha2)
 
-## [Ficha 3](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/ficha3)
+## [Ficha 3](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/main/java/ficha3)
 >Modelagem das classes `ContaBancária`, `Banco` e `Casa`
 
 ## [Ficha 4](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/ficha4)
