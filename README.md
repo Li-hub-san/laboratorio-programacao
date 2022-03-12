@@ -19,4 +19,4 @@ Desenvolver uma aplicação que gere uma `AppStore`, permitindo a inserção e c
 
 
 ## [Ficha 7](https://github.com/Li-hub-san/lab-prog-ficha7)
->Projeto `Spring Boot`. Criação de uma API com endpoints pre-definidos.
+>Projeto `Spring Boot`. Criação de uma `API` com `endpoints` pre-definidos.
