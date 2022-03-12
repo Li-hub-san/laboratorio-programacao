@@ -14,5 +14,9 @@
 
 ## [FichaExtra 1](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/main/java/fichaExtra)
 
+## [Projeto Extra 1](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/main/java/projeto1)
+Desenvolver uma aplicação que gere uma `AppStore`, permitindo a inserção e consulta de informação relevante.
+
+
 ## [Ficha 7](https://github.com/Li-hub-san/lab-prog-ficha7)
 >Projeto `Spring Boot`. Criação de uma API com endpoints pre-definidos.
