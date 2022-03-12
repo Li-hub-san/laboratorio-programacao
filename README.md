@@ -12,7 +12,7 @@
 ## [Ficha 5](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/main/java/ficha5)
 >Primeiro projeto `Maven`.
 
-## [FichaExtra 1](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/main/java/fichaExtra)
+## [Ficha Extra 1](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/main/java/fichaExtra)
 
 ## [Projeto Extra 1](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/main/java/projeto1)
 Desenvolver uma aplicação que gere uma `AppStore`, permitindo a inserção e consulta de informação relevante.
