@@ -10,3 +10,6 @@
 >Este exercicio deverá permitir adquirir fruta sob 3 unidades de medida. Adicionar fruta ao cesto e consultar a sua capacidade. Consultar que tipo de fruta contém e quantidades por tipo.
 
 ## [FichaExtra 1](https://github.com/Li-hub-san/laboratorio-programacao/tree/main/src/main/java/fichaExtra)
+
+## [Ficha 7](https://github.com/Li-hub-san/lab-prog-ficha7)
+>Projeto Spring Boot. criação de uma API com endpoints pre-definidos.
