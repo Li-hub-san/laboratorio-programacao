@@ -6,39 +6,39 @@
 
 Crie uma classe `Pessoa` que contém os seguintes atributos:
 
-`primeiroNome` e `últimoNome`, ambos do tipo `String`;
+:white_check_mark: `primeiroNome` e `últimoNome`, ambos do tipo `String`;
 
-`idade` do tipo `int`;
+:white_check_mark: idade` do tipo `int`;
 
-`saldo` do tipo `double`;
+:white_check_mark: `saldo` do tipo `double`;
 
-`id` do tipo `UUID`.
+:white_check_mark: `id` do tipo `UUID`.
 
-Todas as pessoas devem ter um identificador único, gerado automaticamente.
+:white_check_mark: Todas as pessoas devem ter um identificador único, gerado automaticamente.
 
-Adicionar os `getters` e `setters` que achar necessários.
+:white_check_mark: Adicionar os `getters` e `setters` que achar necessários.
 
-Escreva a função `main()` para testar a classe `Pessoa`.
+:white_check_mark: Escreva a função `main()` para testar a classe `Pessoa`.
 
 **Exercício 2:**
 
 Crie uma classe `Mercado`:
 
-List<Pessoa> `pessoas`;
+:white_check_mark: List<Pessoa> `pessoas`;
 
-Implemente um método para obter o valor `totalAcumulado()` de `saldo` da lista de pessoas.
+:white_check_mark: Implemente um método para obter o valor `totalAcumulado()` de `saldo` da lista de pessoas.
 
-Escreva a função `main()` para testar a classe `Mercado`.
+:white_check_mark: Escreva a função `main()` para testar a classe `Mercado`.
 
-Deverá adicionar pessoas com diferentes valores de saldo.
+:white_check_mark: Deverá adicionar pessoas com diferentes valores de saldo.
 
 **Exercício 3:**
 
 Coloque o seguinte ficheiro no seu projeto, na pasta `resources`. Crie uma classe chamada `LoadFromFile`.
 
-Defina o método `obterInformacaoFicheiro()` que recebe como parâmetro o nome do ficheiro(do tipo `String`) e retorna uma lista de pessoas.
+:white_check_mark: Defina o método `obterInformacaoFicheiro()` que recebe como parâmetro o nome do ficheiro(do tipo `String`) e retorna uma lista de pessoas.
 
-Deverá ser usado a biblioteca `org.json`.
+:white_check_mark: Deverá ser usado a biblioteca `org.json`.
 
 Deverá dividir a função `obterInformacaoFicheiro()` em responsabilidades, nomeadamentenas seguintes funções:
 
