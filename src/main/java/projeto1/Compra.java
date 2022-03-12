@@ -1,9 +1,10 @@
 package projeto1;
 
+import org.json.JSONObject;
+import projeto1.utilizador.Cliente;
+
 import java.util.Date;
 import java.util.List;
-import org.json.JSONObject;
-import projeto1.user.Cliente;
 
 public class Compra {
 
@@ -19,8 +20,8 @@ public class Compra {
 
         // calcular preco a partir das aplicações compradas
         this.preco = aplicacoes.stream()
-            .mapToDouble(Aplicacao::getPreco)
-            .sum();
+                .mapToDouble(Aplicacao::getPreco)
+                .sum();
 
         // adicionar uma venda a cada uma das aplicações
         aplicacoes.forEach(Aplicacao::adicionarVenda);

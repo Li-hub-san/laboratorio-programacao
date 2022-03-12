@@ -2,9 +2,9 @@ package projeto1.menu;
 
 import projeto1.auxiliares.AuxiliarExcecao;
 import projeto1.auxiliares.AuxiliarMenu;
-import projeto1.user.Cliente;
-import projeto1.user.Programador;
-import projeto1.user.Utilizador;
+import projeto1.utilizador.Cliente;
+import projeto1.utilizador.Programador;
+import projeto1.utilizador.Utilizador;
 
 import java.util.ArrayList;
 import java.util.List;

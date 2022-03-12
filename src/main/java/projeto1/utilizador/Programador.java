@@ -1,4 +1,4 @@
-package projeto1.user;
+package projeto1.utilizador;
 
 import org.json.JSONPropertyIgnore;
 import projeto1.Aplicacao;

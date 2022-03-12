@@ -1,4 +1,4 @@
-package projeto1.user;
+package projeto1.utilizador;
 
 import org.json.JSONObject;
 import projeto1.menu.MenuAutenticacao;
@@ -39,7 +39,7 @@ public abstract class Utilizador {
     public String getPalavraPasse() {
         return palavraPasse;
     }
-    
+
     @Override
     public String toString() {
         return new JSONObject(this).toString(2);
