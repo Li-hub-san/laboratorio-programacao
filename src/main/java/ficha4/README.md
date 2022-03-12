@@ -8,8 +8,8 @@ Crie um novo projeto. Numa loja, toda a fruta vendida tem um nome e um preço ba
 
 ### Exercício 1: 
 
-:white_check_mark: Crie uma hierarquia onde [`Fruta`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/ficha4/fruta/Fruta.java) é uma classe abstrata, com as subclasses [`FrutaUnidade`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/ficha4/fruta/FrutaUnidade.java), [`FrutaPeso`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/ficha4/FrutaPeso.java), e
-[`FrutaVolume`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/ficha4/fruta/FrutaVolume.java).
+:white_check_mark: Crie uma hierarquia onde [`Fruta`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha4/fruta/Fruta.java) é uma classe abstrata, com as subclasses [`FrutaUnidade`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha4/fruta/FrutaUnidade.java), [`FrutaPeso`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha4/fruta/FrutaPeso.java), e
+[`FrutaVolume`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha4/fruta/FrutaVolume.java).
 
 :white_check_mark: a) A classe abstrata deverá ter as variáveis comuns a todas as subclasses
 método abstrato double pagar(). Inclua os métodos concretos que considerar adequados.
