@@ -20,7 +20,7 @@ dando a adequada implementação ao método double `pagar()` para cada caso. _No
 :white_check_mark: Escreva a função `main()` para testar as classes acima descritas.
 
 ### Exercício 2
-:white_check_mark: Defina a classe `Cesto`, que representa um conjunto de frutas adquiridas.
+:white_check_mark: Defina a classe [`Cesto`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha4/fruta/Cesto.java), que representa um conjunto de frutas adquiridas.
 Esta classe deverá implementar o seguinte:
 
 :white_check_mark: a) Uma variável de instância para o total de items no cesto e uma constante que determina a capacidade máxima do cesto como sendo 100. Inclua também um array de Fruta para representar o cesto, que é um conjunto de frutas.
