@@ -1,8 +1,8 @@
-package projeto1.utilizador;
+package projetoExtra1.utilizador;
 
 import org.json.JSONPropertyIgnore;
-import projeto1.Aplicacao;
-import projeto1.TipoAplicacao;
+import projetoExtra1.Aplicacao;
+import projetoExtra1.TipoAplicacao;
 
 import java.util.ArrayList;
 import java.util.List;

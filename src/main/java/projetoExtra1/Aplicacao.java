@@ -1,9 +1,9 @@
-package projeto1;
+package projetoExtra1;
 
 import org.json.JSONObject;
 import org.json.JSONPropertyIgnore;
-import projeto1.utilizador.Programador;
-import projeto1.utilizador.Utilizador;
+import projetoExtra1.utilizador.Programador;
+import projetoExtra1.utilizador.Utilizador;
 
 import java.util.HashMap;
 import java.util.List;

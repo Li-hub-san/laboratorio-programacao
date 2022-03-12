@@ -1,4 +1,4 @@
-package projeto1.auxiliares;
+package projetoExtra1.auxiliares;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;

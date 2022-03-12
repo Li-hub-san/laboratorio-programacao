@@ -1,4 +1,4 @@
-package projeto1.utilizador;
+package projetoExtra1.utilizador;
 
 public class Cliente extends Utilizador {
 

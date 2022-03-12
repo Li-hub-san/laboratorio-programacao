@@ -1,7 +1,7 @@
-package projeto1;
+package projetoExtra1;
 
-import projeto1.menu.MenuAutenticacao;
-import projeto1.utilizador.Cliente;
+import projetoExtra1.menu.MenuAutenticacao;
+import projetoExtra1.utilizador.Cliente;
 
 import java.io.IOException;
 

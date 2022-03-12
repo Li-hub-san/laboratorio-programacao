@@ -1,7 +1,7 @@
-package projeto1.utilizador;
+package projetoExtra1.utilizador;
 
 import org.json.JSONObject;
-import projeto1.menu.MenuAutenticacao;
+import projetoExtra1.menu.MenuAutenticacao;
 
 public abstract class Utilizador {
     private MenuAutenticacao autenticacao;

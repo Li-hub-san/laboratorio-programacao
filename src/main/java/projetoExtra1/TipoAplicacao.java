@@ -1,4 +1,4 @@
-package projeto1;
+package projetoExtra1;
 
 public enum TipoAplicacao {
     GAMES, BUSINESS, EDUCATION, LIFESTYLE, ENTERTAINMENT, UTILITIES, TRAVEL, HEALTH_AND_FITNESS

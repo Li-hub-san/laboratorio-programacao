@@ -1,8 +1,8 @@
-package projeto1.menu;
+package projetoExtra1.menu;
 
-import projeto1.auxiliares.AuxiliarMenu;
-import projeto1.utilizador.Programador;
-import projeto1.utilizador.Utilizador;
+import projetoExtra1.auxiliares.AuxiliarMenu;
+import projetoExtra1.utilizador.Programador;
+import projetoExtra1.utilizador.Utilizador;
 
 public class MenuAppStore extends Menu {
 

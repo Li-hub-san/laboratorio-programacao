@@ -1,7 +1,7 @@
-package projeto1;
+package projetoExtra1;
 
 import org.json.JSONObject;
-import projeto1.utilizador.Cliente;
+import projetoExtra1.utilizador.Cliente;
 
 import java.util.Date;
 import java.util.List;

@@ -1,7 +1,7 @@
-package projeto1.menu;
+package projetoExtra1.menu;
 
-import projeto1.auxiliares.AuxiliarExcecao;
-import projeto1.auxiliares.AuxiliarMenu;
+import projetoExtra1.auxiliares.AuxiliarExcecao;
+import projetoExtra1.auxiliares.AuxiliarMenu;
 
 import java.util.InputMismatchException;
 
@@ -27,6 +27,7 @@ public abstract class Menu {
     }
 
     protected abstract void imprimirOpcoes();
+
     protected abstract void tratarOpcao(int opcao);
 
 }

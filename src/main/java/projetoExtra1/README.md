@@ -1,6 +1,6 @@
 # Laboratório — programação
 
-## ProjetoExtra 1
+## Projeto Extra 1
 
 **1. Descrição**
 
