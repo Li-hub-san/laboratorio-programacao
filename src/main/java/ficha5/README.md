@@ -4,7 +4,7 @@
 
 **Exercício 1:** Crie o seu primeiro projeto  `Maven`.
 
-Crie uma classe `Pessoa` que contém os seguintes atributos:
+Crie uma classe [`Pessoa`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha5/Pessoa.java) que contém os seguintes atributos:
 
 :white_check_mark: `primeiroNome` e `últimoNome`, ambos do tipo `String`;
 
@@ -22,7 +22,7 @@ Crie uma classe `Pessoa` que contém os seguintes atributos:
 
 **Exercício 2:**
 
-Crie uma classe `Mercado`:
+Crie uma classe [`Mercado`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha5/Mercado.java):
 
 :white_check_mark: List<Pessoa> `pessoas`;
 
@@ -34,7 +34,7 @@ Crie uma classe `Mercado`:
 
 **Exercício 3:**
 
-Coloque o seguinte ficheiro no seu projeto, na pasta `resources`. Crie uma classe chamada `LoadFromFile`.
+Coloque o seguinte ficheiro no seu projeto, na pasta `resources`. Crie uma classe chamada [`LoadFromFile`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha5/LoadFromFile.java).
 
 :white_check_mark: Defina o método `obterInformacaoFicheiro()` que recebe como parâmetro o nome do ficheiro(do tipo `String`) e retorna uma lista de pessoas.
 
