@@ -3,9 +3,11 @@ package ficha5;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,8 +19,19 @@ public class LoadFromFile {
     // código para ler a partir dos resources encontrado aqui: https://kodejava.org/how-do-i-read-json-file-using-json-java-org-json-library/
     // código para fazer parsing dos objectos encontrado aqui: https://stackoverflow.com/a/10926379
     public List<Pessoa> obterInformacaoFicheiro(String ficheiro) {
+        try {
+            InputStream is = getFileAsIOStream(ficheiro);
+            String conteudoFicheiro = getFileContent(is);
+            return convertStringToPessoa(conteudoFicheiro);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        return new ArrayList<>();
+    }
+
+    private InputStream getFileAsIOStream(String ficheiro) throws NullPointerException {
         // para ir buscar a partir dos resources, os ficheiros têm que estar no caminho /src/main/resources
-        // pasta "main.java.ficha5" adicionada para poder diferenciar para que projectos os resources são
+        // pasta "ficha5" adicionada para poder diferenciar para que projetos os resources são
         String resourceName = "/ficha5/" + ficheiro;
 
         // ler ficheiro a partir dos resources
@@ -27,14 +40,25 @@ public class LoadFromFile {
             // quando o ficheiro não é encontrado, envia uma excepção
             throw new NullPointerException("Cannot find resource file " + resourceName);
         }
+        return is;
+    }
 
-        // preparar a leitura do ficheiro
-        JSONTokener tokener = new JSONTokener(is);
-        // começar o parsing a partir de um arreio
-        JSONArray jsonArray = new JSONArray(tokener);
+    private String getFileContent(InputStream is) throws IOException {
+        InputStreamReader inStrReader = new InputStreamReader(is);
+        BufferedReader br = new BufferedReader(inStrReader);
 
-        // lista de pessoas que vão ser criadas a partir do ficheiro
-        List<Pessoa> pessoas = new ArrayList<>();
+        StringBuilder conteudoFicheiro = new StringBuilder();
+        String line = br.readLine();
+        while (line != null) {
+            conteudoFicheiro.append(line);
+            line = br.readLine();
+        }
+        return conteudoFicheiro.toString();
+    }
+
+    private ArrayList<Pessoa> convertStringToPessoa(String texto) {
+        ArrayList<Pessoa> pessoas = new ArrayList<>();
+        JSONArray jsonArray = new JSONArray(texto);
 
         // iterar o arreio encontrado para cada objecto
         for (Object object : jsonArray) {
@@ -53,24 +77,12 @@ public class LoadFromFile {
                 // adicionar nova pessoa a lista para poder devolver tudo de uma vez
                 pessoas.add(pessoa);
             } catch (JSONException e) {
-                // apanhar possiveis erros quando estiver a fazer parse dos objetos ou propriedades
-                System.out.println("Erro de parse: " + e.getMessage());
+                System.out.println(e);
             }
         }
 
         return pessoas;
     }
-
-//    public void getFileAsIOStream() {
-//
-//    }
-//
-//    public void getFileContent() {
-//
-//    }
-//
-//    public void convertStringToPessoa() {
-//
-//    }
 }
+
 
