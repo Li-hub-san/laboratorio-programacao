@@ -12,10 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoadFromFile {
-
-    public LoadFromFile() {
-    }
-
+    
     // código para ler a partir dos resources encontrado aqui: https://kodejava.org/how-do-i-read-json-file-using-json-java-org-json-library/
     // código para fazer parsing dos objectos encontrado aqui: https://stackoverflow.com/a/10926379
     public List<Pessoa> obterInformacaoFicheiro(String ficheiro) {
