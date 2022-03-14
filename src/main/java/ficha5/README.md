@@ -42,13 +42,13 @@ Coloque o seguinte ficheiro no seu projeto, na pasta `resources`. Crie uma class
 
 Deverá dividir a função `obterInformacaoFicheiro()` em responsabilidades, nomeadamentenas seguintes funções:
 
-`getFileAsIOStream()`;
+:white_check_mark: `getFileAsIOStream()`;
 
-`getFileContent()`;
+:white_check_mark: `getFileContent()`;
 
-`convertStringToPessoa()`.
+:white_check_mark: `convertStringToPessoa()`.
 
-As exceções deverão ser tratadas na função correspondente.
+:white_check_mark: As exceções deverão ser tratadas na função correspondente.
 
 **Exercício 4:**
 
