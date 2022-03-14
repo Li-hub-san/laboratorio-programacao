@@ -34,7 +34,7 @@ permitidos levantamentos que coloquem o saldo negativo.
 
 ### Exercício 2:
 
-**Codifique a classe [`Banco`](/src/ficha3/Banco.java) com os seguintes atributos e métodos:**
+**Codifique a classe [`Banco`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha3/Banco.java) com os seguintes atributos e métodos:**
 
 :white_check_mark: a) Um nome e um array de contas de objetos do tipo `ContaBancária` (ver exercício anterior).
 
@@ -51,7 +51,7 @@ informação da conta sempre que atualiza o saldo.
 
 ### Exercício 3:
 
-**Crie uma classe [`Casa`](/src/ficha3/Casa.java), a qual deverá ter os seguintes atributos e métodos:**
+**Crie uma classe [`Casa`](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha3/Casa.java), a qual deverá ter os seguintes atributos e métodos:**
 
 :white_check_mark: Um atributo privado do tipo `String`, morada, para a morada da casa.
 
@@ -86,4 +86,4 @@ diferentes valores dos seus atributos.
 :white_check_mark: **Faça a modelação do sistema com um diagrama de classes `UML` que descreve o sistema. Adicione o seu projeto ao GitHub e crie um ficheiro `README`. Adicione ao ficheiro `README` uma pequena descrição do projeto e adicione o diagrama `UML` (pode encontrar ajuda a escrever o ficheiro README aqui).**
 
 ## Diagrama de Classes
-![Diagrama de classes](/src/ficha3/uml-ficha3.png)
+![Diagrama de classes](https://github.com/Li-hub-san/laboratorio-programacao/blob/main/src/main/java/ficha3/uml-ficha3.png)
